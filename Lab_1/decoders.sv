@@ -1,5 +1,5 @@
 
-module 2to4dec (out, in, enable);
+module dec2to4 (out, in, enable);
     output logic [3:0] out;
     input logic [1:0] in;
     input logic enable; // enable is RegWrite
@@ -20,7 +20,7 @@ module 2to4dec (out, in, enable);
     and #(50) e3(out[3], in1, in0, enable);
 endmodule
 
-module 2to4dec_testbench();
+module dec2to4_testbench();
     logic [31:0] out;
     logic [4:0] in;
     logic enable;
@@ -51,7 +51,7 @@ endmodule
 
 // -------------------------------------------------------
 
-module 3to8dec (out, in, enable);
+module dec3to8 (out, in, enable);
     output logic [7:0] out;
     input logic [2:0] in;
     input logic enable; // enable is out[0], out[1], ... from 2to4dec file
@@ -76,7 +76,7 @@ module 3to8dec (out, in, enable);
     and #(50) e7(out[7], in2, in1, in0, enable);
 endmodule
 
-module 3to8dec_testbench();
+module dec3to8_testbench();
     logic [31:0] out;
     logic [4:0] in;
     logic enable;
@@ -107,7 +107,7 @@ endmodule
 
 // -------------------------------------------------------
 
-module 5to32dec (out, in, enable);
+module dec5to32 (out, in, enable);
     output logic [31:0] out;
     input logic [4:0] in;
     input logic enable; // this is RegWrite -- same enable as 2:4 decoder enable
@@ -122,7 +122,7 @@ module 5to32dec (out, in, enable);
     3to8dec d3(out[31:24], in[4:2], 2to4out[3]);
 endmodule
 
-module 5to32dec_testbench();
+module dec5to32_testbench();
     logic [31:0] out;
     logic [4:0] in;
     logic enable;
