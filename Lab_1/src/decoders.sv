@@ -1,4 +1,5 @@
 
+`timescale 1ns/10ps
 module dec2to4 (out, in, enable);
     output logic [3:0] out;
     input logic [1:0] in;
@@ -21,11 +22,12 @@ module dec2to4 (out, in, enable);
 endmodule
 
 module dec2to4_testbench();
-    logic [31:0] out;
-    logic [4:0] in;
+    logic [3:0] out;
+    logic [1:0] in;
     logic enable;
+    logic clk;
 
-    5to32dec dut (.*);
+    dec2to4 dut (.*);
 
     parameter clk_period = 100;
     initial begin
@@ -46,6 +48,8 @@ module dec2to4_testbench();
             in <= i;
             @(posedge clk);
         end
+        @(posedge clk);
+        $stop;
     end
 endmodule
 
@@ -56,7 +60,7 @@ module dec3to8 (out, in, enable);
     input logic [2:0] in;
     input logic enable; // enable is out[0], out[1], ... from 2to4dec file
 
-    logic nin0, nin1, nin2;
+    logic nin0, nin1, nin2, in0, in1, in2;
 
     not #(50) n0(nin0, in[0]);
     not #(50) n1(nin1, in[1]);
@@ -68,7 +72,7 @@ module dec3to8 (out, in, enable);
 
     and #(50) e0(out[0], nin2, nin1, nin0, enable);
     and #(50) e1(out[1], nin2, nin1, in0, enable);
-    and #(50) e2(out[2], nin2, in0, nin0, enable);
+    and #(50) e2(out[2], nin2, in1, nin0, enable);
     and #(50) e3(out[3], nin2, in1, in0, enable);
     and #(50) e4(out[4], in2, nin1, nin0, enable);
     and #(50) e5(out[5], in2, nin1, in0, enable);
@@ -77,11 +81,12 @@ module dec3to8 (out, in, enable);
 endmodule
 
 module dec3to8_testbench();
-    logic [31:0] out;
-    logic [4:0] in;
+    logic [7:0] out;
+    logic [2:0] in;
     logic enable;
+    logic clk;
 
-    5to32dec dut (.*);
+    dec3to8 dut (.*);
 
     parameter clk_period = 100;
     initial begin
@@ -102,6 +107,8 @@ module dec3to8_testbench();
             in <= i;
             @(posedge clk);
         end
+        @(posedge clk);
+        $stop;
     end
 endmodule
 
@@ -112,24 +119,25 @@ module dec5to32 (out, in, enable);
     input logic [4:0] in;
     input logic enable; // this is RegWrite -- same enable as 2:4 decoder enable
 
-    logic [3:0] 2to4out;
+    logic [3:0] out2to4;
 
-    2to4dec e(2to4out, in[1:0], enable);
+    dec2to4 e(out2to4, in[4:3], enable);
     
-    3to8dec d0(out[7:0], in[4:2], 2to4out[0]);
-    3to8dec d1(out[15:8], in[4:2], 2to4out[1]);
-    3to8dec d2(out[23:16], in[4:2], 2to4out[2]);
-    3to8dec d3(out[31:24], in[4:2], 2to4out[3]);
+    dec3to8 d0(out[7:0], in[2:0], out2to4[0]);
+    dec3to8 d1(out[15:8], in[2:0], out2to4[1]);
+    dec3to8 d2(out[23:16], in[2:0], out2to4[2]);
+    dec3to8 d3(out[31:24], in[2:0], out2to4[3]);
 endmodule
 
 module dec5to32_testbench();
     logic [31:0] out;
     logic [4:0] in;
     logic enable;
+    logic clk;
 
-    5to32dec dut (.*);
+    dec5to32 dut (.*);
 
-    parameter clk_period = 100;
+    parameter clk_period = 200;
     initial begin
         clk <= 0;
         forever #(clk_period/2) clk <= ~clk;
@@ -143,10 +151,13 @@ module dec5to32_testbench();
             in <= i;
             @(posedge clk);
         end
+        @(posedge clk);
         enable <= 1; in <= 5'b00000; @(posedge clk);
         for (i=0; i < 2**5; i++) begin
             in <= i;
             @(posedge clk);
         end
+        @(posedge clk);
+        $stop;
     end
 endmodule

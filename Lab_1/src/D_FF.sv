@@ -1,3 +1,5 @@
+
+`timescale 1ns/10ps
 module D_FF (q, d, reset, clk);
     output reg q;
     input d, reset, clk;
@@ -13,16 +15,16 @@ endmodule
 
 module reg64 (out, in, enable, reset, clk);
     output logic [63:0] out;
-    intput logic [63:0] in;
+    input logic [63:0] in;
     input logic [31:0] enable;
     input logic reset, clk;
 
     genvar i;
     generate
-        for (i = 0; i < 64; i++) begin : 64_dff_registers
+        for (i = 0; i < 64; i++) begin : dff_registers_64
             logic din, dhold, dchange;
 
-            not #(50) n(n_enable, enable)
+            not #(50) n(n_enable, enable);
             and #(50) a0(dhold, n_enable, out[i]);
             and #(50) a1(dchange, enable, in[i]);
 

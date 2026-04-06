@@ -1,3 +1,5 @@
+
+`timescale 1ns/10ps
 module mux2to1 (out, in0, in1, sel);
     output logic out;
     input logic in0, in1, sel;
@@ -28,7 +30,7 @@ endmodule
 module mux32to1 (out, in, sel);
     output logic out;
     input logic [31:0] in;
-    intput logic [4:0] sel;
+    input logic [4:0] sel;
 
     logic [15:0] l0out;
     logic [7:0] l1out;
@@ -63,11 +65,11 @@ module mux64x32to1 (out, in, sel);
     generate
         for (i=0; i < 64; i++) begin : mux31to1_64times
             // store all 0th bits from mux 31:0, then 1st bit, then 2nd, etc.
-            logic bus;
+            logic [31:0] bus_to_store;
             for (j=0; j < 32; j++) begin : store_in_bus
-                assign bus[j] = in[j][i];
+                assign bus_to_store[j] = in[j][i];
             end
-            mux32to1 m(out[i], bus, sel);
+            mux32to1 m(out[i], bus_to_store, sel);
         end
     endgenerate
 
