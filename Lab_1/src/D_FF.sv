@@ -21,7 +21,7 @@ module reg64 (out, in, enable, reset, clk);
 
     genvar i, j;
     generate
-        for (i = 0; i < 32; i++) begin : make_32_registers
+        for (i = 0; i < 31; i++) begin : make_32_registers
             for (j = 0; j < 64; j++) begin : dff_registers_64
                 logic din, dhold, dchange;
 

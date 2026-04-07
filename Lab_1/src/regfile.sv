@@ -6,18 +6,15 @@ module regfile (ReadData1, ReadData2, ReadRegister1, ReadRegister2, WriteRegiste
     input [63:0] WriteData;
     input RegWrite, clk, reset;
 
+    assign reset = 1'b0; // bit assignment is allowed 
+
     logic [31:0] writeEn;
     logic [31:0][63:0] regOut;
 
     dec5to32 d(writeEn, WriteRegister, RegWrite);
 
-    genvar i;
-    generate
-        for (i=0; i < 31; i++) begin : register
-            reg64 r(regOut[i], WriteData, writeEn[i], clk, reset);
-        end
-    endgenerate
-
+    reg64 r(regOut, WriteData, writeEn, clk, reset);
+    
     assign regOut[31] = 64'b0;
 
     mux64x32to1 m1(ReadData1, reg_out, ReadRegister1);

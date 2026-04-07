@@ -151,7 +151,6 @@ module mux64x32to1_testbench ();
     end
 
     integer i, j;
-
     initial begin
         in <= '0;
         sel <= 5'b0;
