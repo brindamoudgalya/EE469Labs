@@ -1,0 +1,3217 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:39:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 09:39:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:39:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 09:39:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:39:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 09:39:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:39:11 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 09:39:11 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:39:11 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 09:39:11 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 09:39:12 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftz0cdzk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz0cdzk
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(160)
+#    Time: 6750 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 160
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:43:26 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 09:43:26 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:43:26 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 09:43:27 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:43:27 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 09:43:27 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:43:27 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 09:43:27 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:43:27 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 09:43:27 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 09:43:33 on Apr 06,2026, Elapsed time: 0:04:21
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 09:43:33 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftxicj4k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxicj4k
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(160)
+#    Time: 6750 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 160
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 09:45:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 09:45:06 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:06 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 09:45:06 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:06 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 09:45:06 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:06 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 09:45:06 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 09:45:09 on Apr 06,2026, Elapsed time: 0:01:36
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 09:45:09 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-3015) ../src/decoders.sv(126): [PCDPC] - Port size (8) does not match connection size (7) for port 'out'. The port definition is at: ../src/decoders.sv(58).
+#    Time: 0 ps  Iteration: 0  Instance: /dec5to32_testbench/dut/d0 File: ../src/decoders.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftbq6nqf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbq6nqf
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(160)
+#    Time: 6750 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 160
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:30 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 09:45:30 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:30 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 09:45:30 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:30 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 09:45:31 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:31 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 09:45:31 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:45:31 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 09:45:31 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 09:45:34 on Apr 06,2026, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 09:45:34 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftcd05qk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcd05qk
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(160)
+#    Time: 6750 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 160
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:51:38 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 10:51:38 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:51:38 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 10:51:39 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:51:39 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 10:51:39 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:51:39 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 10:51:39 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:51:39 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 10:51:39 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:51:42 on Apr 06,2026, Elapsed time: 1:06:08
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 10:51:42 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlft3y298r".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3y298r
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(163)
+#    Time: 13250 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 163
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:49 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 10:56:49 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:49 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 10:56:49 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:49 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 10:56:49 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:49 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 10:56:49 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:49 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 10:56:49 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:56:52 on Apr 06,2026, Elapsed time: 0:05:10
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 10:56:52 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftxa60b0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxa60b0
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(163)
+#    Time: 26500 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 163
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:57:41 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 10:57:41 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:57:41 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 10:57:41 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:57:41 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 10:57:41 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:57:41 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 10:57:41 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:57:41 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 10:57:41 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:57:44 on Apr 06,2026, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 10:57:44 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftmq1vam".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmq1vam
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(161)
+#    Time: 13700 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 161
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 11:08:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 11:08:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 11:08:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:08:11 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:11 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 11:08:11 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:08:14 on Apr 06,2026, Elapsed time: 0:10:30
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 11:08:14 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftkaebs4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkaebs4
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(161)
+#    Time: 13700 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 161
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:27 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 11:10:27 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:27 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 11:10:27 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:27 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux64x32to1
+# End time: 11:10:27 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:28 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:10:28 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:28 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 11:10:28 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:10:35 on Apr 06,2026, Elapsed time: 0:02:21
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work dec5to32_testbench 
+# Start time: 11:10:35 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.dec5to32_testbench
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftkzm10z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkzm10z
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/decoders.sv(159)
+#    Time: 13300 ns  Iteration: 1  Instance: /dec5to32_testbench
+# Break in Module dec5to32_testbench at ../src/decoders.sv line 159
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:09 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 14:29:09 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:09 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 14:29:09 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:09 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# ** Error: ../src/multiplexers.sv(24): (vlog-2730) Undefined variable: 'clk'.
+# ** Error: ../src/multiplexers.sv(30): (vlog-2730) Undefined variable: 'clk'.
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# End time: 14:29:09 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 9
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "../src/multiplexers.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:32 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 14:29:32 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:32 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 14:29:32 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux64x32to1
+# End time: 14:29:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 14:29:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 14:29:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:29:34 on Apr 06,2026, Elapsed time: 3:18:59
+# Errors: 5, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux2to1_testbench 
+# Start time: 14:29:35 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux2to1_testbench
+# Loading work.mux2to1
+# ** Error: Cannot open macro file: mux2to1_wave.do
+# Error in macro ./runlab.do line 21
+# Cannot open macro file: mux2to1_wave.do
+#     while executing
+# "do mux2to1_wave.do"
+add wave -position end  sim:/mux2to1_testbench/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftcjqe07".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcjqe07
+add wave -position end  sim:/mux2to1_testbench/sel
+add wave -position end  sim:/mux2to1_testbench/in0
+add wave -position end  sim:/mux2to1_testbench/in1
+add wave -position end  sim:/mux2to1_testbench/out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux2to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:18 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 14:30:18 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:18 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 14:30:18 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:18 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux64x32to1
+# End time: 14:30:18 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:18 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 14:30:18 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:30:18 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 14:30:19 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 14:30:20 on Apr 06,2026, Elapsed time: 0:00:45
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux2to1_testbench 
+# Start time: 14:30:20 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux2to1_testbench
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftj88qiv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj88qiv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(37)
+#    Time: 1100 ns  Iteration: 1  Instance: /mux2to1_testbench
+# Break in Module mux2to1_testbench at ../src/multiplexers.sv line 37
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:12:34 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 15:12:34 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:12:34 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 15:12:34 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:12:34 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 15:12:34 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:12:34 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 15:12:34 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:12:34 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 15:12:35 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 15:12:39 on Apr 06,2026, Elapsed time: 0:42:19
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 15:12:40 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Error: Cannot open macro file: mux32to1_wave.do
+# Error in macro ./runlab.do line 21
+# Cannot open macro file: mux32to1_wave.do
+#     while executing
+# "do mux32to1_wave.do"
+add wave -position end  sim:/mux32to1_testbench/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlfte7j6rm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte7j6rm
+add wave -position end  sim:/mux32to1_testbench/in
+add wave -position 1  sim:/mux32to1_testbench/sel
+add wave -position end  sim:/mux32to1_testbench/out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux32to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:14:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 15:14:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:14:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 15:14:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:14:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 15:14:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:14:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 15:14:10 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:14:10 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 15:14:11 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 15:14:12 on Apr 06,2026, Elapsed time: 0:01:32
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 15:14:12 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftfytw2i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfytw2i
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(114)
+#    Time: 12700 ns  Iteration: 1  Instance: /mux32to1_testbench
+# Break in Module mux32to1_testbench at ../src/multiplexers.sv line 114
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux32to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:04 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 15:17:04 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:04 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 15:17:04 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:04 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 15:17:05 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 15:17:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:17:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 15:17:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:17:06 on Apr 06,2026, Elapsed time: 0:02:54
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 15:17:07 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftif605i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftif605i
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(114)
+#    Time: 12700 ns  Iteration: 1  Instance: /mux32to1_testbench
+# Break in Module mux32to1_testbench at ../src/multiplexers.sv line 114
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:32 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 15:21:32 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 15:21:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 15:21:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 15:21:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:33 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 15:21:33 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:21:36 on Apr 06,2026, Elapsed time: 0:04:29
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 15:21:36 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlfty57e44".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfty57e44
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(116)
+#    Time: 25500 ns  Iteration: 1  Instance: /mux32to1_testbench
+# Break in Module mux32to1_testbench at ../src/multiplexers.sv line 116
+add wave -position 3  sim:/mux32to1_testbench/l0out
+add wave -position 4  sim:/mux32to1_testbench/l1out
+add wave -position 5  sim:/mux32to1_testbench/l2out
+add wave -position 6  sim:/mux32to1_testbench/l3out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux32to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 15:23:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 15:23:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 15:23:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 15:23:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:05 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 15:23:05 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:23:07 on Apr 06,2026, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 15:23:07 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftg0kg0j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftg0kg0j
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(116)
+#    Time: 25500 ns  Iteration: 1  Instance: /mux32to1_testbench
+# Break in Module mux32to1_testbench at ../src/multiplexers.sv line 116
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:27:08 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 18:27:08 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:27:08 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 18:27:08 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:27:08 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 18:27:09 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:27:09 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 18:27:09 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:27:09 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 18:27:09 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:27:12 on Apr 06,2026, Elapsed time: 3:04:05
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 18:27:12 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftsy5ii2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsy5ii2
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(116)
+#    Time: 637500 ns  Iteration: 1  Instance: /mux32to1_testbench
+# Break in Module mux32to1_testbench at ../src/multiplexers.sv line 116
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux32to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:47 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:23:47 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:47 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:23:47 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:47 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1
+# End time: 21:23:47 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:47 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:23:47 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:47 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:23:47 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:23:50 on Apr 06,2026, Elapsed time: 2:56:38
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux32to1_testbench 
+# Start time: 21:23:50 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux32to1_testbench
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlfta2n74y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfta2n74y
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(130)
+#    Time: 637500 ns  Iteration: 1  Instance: /mux32to1_testbench
+# Break in Module mux32to1_testbench at ../src/multiplexers.sv line 130
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:59 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:34:59 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:59 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:34:59 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:59 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 21:34:59 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:59 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:34:59 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:59 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:34:59 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:35:02 on Apr 06,2026, Elapsed time: 0:11:12
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux64x32to1_testbench 
+# Start time: 21:35:02 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux64x32to1_testbench
+# Loading work.mux64x32to1
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Error: Cannot open macro file: mux64x32to1_wave.do
+# Error in macro ./runlab.do line 21
+# Cannot open macro file: mux64x32to1_wave.do
+#     while executing
+# "do mux64x32to1_wave.do"
+add wave -position end  sim:/mux64x32to1_testbench/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftqd0azg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqd0azg
+add wave -position end  sim:/mux64x32to1_testbench/sel
+add wave -position end  sim:/mux64x32to1_testbench/in
+add wave -position end  sim:/mux64x32to1_testbench/out
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:35 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:35:35 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:35 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:35:35 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:35 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 21:35:35 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:35 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:35:36 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:36 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:35:36 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:35:37 on Apr 06,2026, Elapsed time: 0:00:35
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux64x32to1_testbench 
+# Start time: 21:35:37 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux64x32to1_testbench
+# Loading work.mux64x32to1
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Error: Cannot open macro file: mux64x32to1_wave.do
+# Error in macro ./runlab.do line 21
+# Cannot open macro file: mux64x32to1_wave.do
+#     while executing
+# "do mux64x32to1_wave.do"
+add wave -position end  sim:/mux64x32to1_testbench/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftbjbhsv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbjbhsv
+add wave -position end  sim:/mux64x32to1_testbench/sel
+add wave -position end  sim:/mux64x32to1_testbench/in
+add wave -position end  sim:/mux64x32to1_testbench/out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux64x32to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:36:20 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:36:20 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:36:20 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:36:20 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:36:20 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 21:36:20 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:36:20 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:36:20 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:36:20 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:36:20 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:36:22 on Apr 06,2026, Elapsed time: 0:00:45
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux64x32to1_testbench 
+# Start time: 21:36:22 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux64x32to1_testbench
+# Loading work.mux64x32to1
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlft11wdg1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft11wdg1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(172)
+#    Time: 637500 ns  Iteration: 1  Instance: /mux64x32to1_testbench
+# Break in Module mux64x32to1_testbench at ../src/multiplexers.sv line 172
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:42:13 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:42:13 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:42:13 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:42:13 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:42:13 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 21:42:13 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:42:13 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:42:13 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:42:13 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:42:14 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 21:42:16 on Apr 06,2026, Elapsed time: 0:05:54
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux64x32to1_testbench 
+# Start time: 21:42:17 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux64x32to1_testbench
+# Loading work.mux64x32to1
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftb28v43".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftb28v43
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(175)
+#    Time: 637500 ns  Iteration: 1  Instance: /mux64x32to1_testbench
+# Break in Module mux64x32to1_testbench at ../src/multiplexers.sv line 175
+# WARNING: No extended dataflow license exists
+dor
+# invalid command name "dor"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:43:52 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:43:52 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:43:52 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:43:52 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:43:52 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 21:43:52 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:43:52 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:43:52 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:43:52 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:43:53 on Apr 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 21:43:54 on Apr 06,2026, Elapsed time: 0:01:37
+# Errors: 1, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux64x32to1_testbench 
+# Start time: 21:43:55 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux64x32to1_testbench
+# Loading work.mux64x32to1
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlft7vzwns".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7vzwns
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(175)
+#    Time: 637500 ns  Iteration: 1  Instance: /mux64x32to1_testbench
+# Break in Module mux64x32to1_testbench at ../src/multiplexers.sv line 175
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:45:45 on Apr 06,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# 
+# Top level modules:
+# 	reg64
+# End time: 21:45:45 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:45:45 on Apr 06,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 21:45:45 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:45:45 on Apr 06,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 21:45:45 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:45:45 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:45:45 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:45:45 on Apr 06,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 21:45:45 on Apr 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:45:49 on Apr 06,2026, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux64x32to1_testbench 
+# Start time: 21:45:49 on Apr 06,2026
+# Loading sv_std.std
+# Loading work.mux64x32to1_testbench
+# Loading work.mux64x32to1
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlft5zs12w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5zs12w
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/multiplexers.sv(175)
+#    Time: 2550 us  Iteration: 1  Instance: /mux64x32to1_testbench
+# Break in Module mux64x32to1_testbench at ../src/multiplexers.sv line 175
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/mux64x32to1_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:06 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 11:35:06 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:06 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 11:35:06 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:06 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 11:35:06 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:06 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:35:06 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:06 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 11:35:06 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:35:10 on Apr 07,2026, Elapsed time: 13:49:21
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work reg64_testbench 
+# Start time: 11:35:10 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.reg64_testbench
+# Loading work.reg64
+# Loading work.D_FF
+# ** Error: Cannot open macro file: reg64_wave.do
+# Error in macro ./runlab.do line 21
+# Cannot open macro file: reg64_wave.do
+#     while executing
+# "do reg64_wave.do"
+add wave -position end  sim:/reg64_testbench/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlfte531k5".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte531k5
+add wave -position end  sim:/reg64_testbench/in
+add wave -position end  sim:/reg64_testbench/out
+add wave -position 1  sim:/reg64_testbench/reset
+add wave -position 2  sim:/reg64_testbench/enable
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/reg64_wave.do
+do r
+# Cannot open macro file: r
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:58 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 11:35:59 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:59 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 11:35:59 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:59 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 11:35:59 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:59 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:35:59 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:35:59 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 11:35:59 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:36:01 on Apr 07,2026, Elapsed time: 0:00:51
+# Errors: 4, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work reg64_testbench 
+# Start time: 11:36:01 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.reg64_testbench
+# Loading work.reg64
+# Loading work.D_FF
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftm6c5at".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm6c5at
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../src/D_FF.sv(87)
+#    Time: 647500 ns  Iteration: 1  Instance: /reg64_testbench
+# Break in Module reg64_testbench at ../src/D_FF.sv line 87
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/reg64_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:21 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 11:54:21 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:21 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 11:54:21 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:21 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 11:54:21 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:54:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 11:54:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:54:26 on Apr 07,2026, Elapsed time: 0:18:25
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 11:54:26 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Error (suppressible): (vsim-3053) ../src/regfile.sv(16): Illegal output or inout port connection for port 'out'.
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(16): [PCDPC] - Port size (2048) does not match connection size (64) for port 'out'. The port definition is at: ../src/D_FF.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(16): [PCDPC] - Port size (32) does not match connection size (1) for port 'enable'. The port definition is at: ../src/D_FF.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(20): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m1 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(21): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m2 File: ../src/multiplexers.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 16
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:59:08 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 11:59:08 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:59:08 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 11:59:09 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:59:09 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 11:59:09 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:59:09 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:59:10 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:59:10 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 11:59:10 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 11:54:26 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Error (suppressible): (vsim-3053) ../src/regfile.sv(16): Illegal output or inout port connection for port 'out'.
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(16): [PCDPC] - Port size (2048) does not match connection size (1) for port 'out'. The port definition is at: ../src/D_FF.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(16): [PCDPC] - Port size (32) does not match connection size (1) for port 'enable'. The port definition is at: ../src/D_FF.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(20): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m1 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(21): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m2 File: ../src/multiplexers.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 16
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:34 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 12:00:34 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:34 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 12:00:34 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:34 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 12:00:34 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:34 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 12:00:34 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:34 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 12:00:35 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 11:54:26 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Error (suppressible): (vsim-3053) ../src/regfile.sv(16): Illegal output or inout port connection for port 'out'.
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(16): [PCDPC] - Port size (2048) does not match connection size (64) for port 'out'. The port definition is at: ../src/D_FF.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/r File: ../src/D_FF.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(20): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m1 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(21): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m2 File: ../src/multiplexers.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 16
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 12:01:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 12:01:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 12:01:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 12:01:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:01:22 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 12:01:22 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 11:54:26 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-3015) ../src/regfile.sv(20): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m1 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(21): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m2 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3839) ../src/regfile.sv(18): Variable '/regstim/dut/regOut[31]', driven via a port connection, is multiply driven. See ../src/regfile.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut File: ../src/regfile.sv
+# ** Warning: Design size of 6091 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Error: Cannot open macro file: regstim_wave.do
+# Error in macro ./runlab.do line 21
+# Cannot open macro file: regstim_wave.do
+#     while executing
+# "do regstim_wave.do"
+add wave -position end  sim:/regstim/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftcsgajz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcsgajz
+add wave -position end  sim:/regstim/reset
+add wave -position end  sim:/regstim/RegWrite
+add wave -position end  sim:/regstim/WriteRegister
+add wave -position end  sim:/regstim/WriteData
+add wave -position end  sim:/regstim/ReadRegister1
+add wave -position end  sim:/regstim/ReadRegister2
+add wave -position end  sim:/regstim/ReadData1
+add wave -position end  sim:/regstim/ReadData2
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/regstim_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:25 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 12:03:25 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:25 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 12:03:25 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:25 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 12:03:25 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:25 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 12:03:26 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:03:26 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 12:03:26 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:03:28 on Apr 07,2026, Elapsed time: 0:09:02
+# Errors: 6, Warnings: 17
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 12:03:28 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: (vsim-3015) ../src/regfile.sv(20): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m1 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3015) ../src/regfile.sv(21): [PCDPC] - Port size (2048) does not match connection size (1) for port 'in'. The port definition is at: ../src/multiplexers.sv(121).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut/m2 File: ../src/multiplexers.sv
+# ** Warning: (vsim-3839) ../src/regfile.sv(18): Variable '/regstim/dut/regOut[31]', driven via a port connection, is multiply driven. See ../src/regfile.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /regstim/dut File: ../src/regfile.sv
+# ** Warning: Design size of 6091 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftt9dre2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftt9dre2
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 7500.00 ns Attempting overwrite of register 31, which should always be 0
+# 12500.00 ns Verifying register 31 is hardwired to 0.
+# 17500.00 ns ReadData1 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns ReadData2 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns Writing pattern to all registers.
+# 327500.00 ns Checking pattern.
+# 487500.00 ns Verifying RegWrite=0 does not overwrite register 0.
+# 492500.00 ns ReadData1 (R0) = 000000000000000X (should match written pattern, not DEADBEEF)
+# 492500.00 ns Overwriting register 5 with 0xCAFEBABECAFEBABE.
+# 507500.00 ns ReadData1 (R5) = 0000000000000000 (expected CAFEBABEcafebabe)
+# 507500.00 ns Checking independent read ports.
+# 512500.00 ns ReadData1 (R1) = 0000000000000000
+# 512500.00 ns ReadData2 (R2) = 0000000000000000
+# 512500.00 ns Applying reset, all registers should clear to 0.
+# 522500.00 ns After reset: R0 = 000000000000000X (expected 0)
+# 527500.00 ns After reset: R1 = 0000000000000000 (expected 0)
+# 532500.00 ns After reset: R2 = 0000000000000000 (expected 0)
+# 537500.00 ns After reset: R3 = 0000000000000000 (expected 0)
+# 542500.00 ns After reset: R4 = 0000000000000000 (expected 0)
+# 547500.00 ns After reset: R5 = 0000000000000000 (expected 0)
+# 552500.00 ns After reset: R6 = 0000000000000000 (expected 0)
+# 557500.00 ns After reset: R7 = 0000000000000000 (expected 0)
+# 562500.00 ns After reset: R8 = 0000000000000000 (expected 0)
+# 567500.00 ns After reset: R9 = 0000000000000000 (expected 0)
+# 572500.00 ns After reset: R10 = 0000000000000000 (expected 0)
+# 577500.00 ns After reset: R11 = 0000000000000000 (expected 0)
+# 582500.00 ns After reset: R12 = 0000000000000000 (expected 0)
+# 587500.00 ns After reset: R13 = 0000000000000000 (expected 0)
+# 592500.00 ns After reset: R14 = 0000000000000000 (expected 0)
+# 597500.00 ns After reset: R15 = 0000000000000000 (expected 0)
+# 602500.00 ns After reset: R16 = 0000000000000000 (expected 0)
+# 607500.00 ns After reset: R17 = 0000000000000000 (expected 0)
+# 612500.00 ns After reset: R18 = 0000000000000000 (expected 0)
+# 617500.00 ns After reset: R19 = 0000000000000000 (expected 0)
+# 622500.00 ns After reset: R20 = 0000000000000000 (expected 0)
+# 627500.00 ns After reset: R21 = 0000000000000000 (expected 0)
+# 632500.00 ns After reset: R22 = 0000000000000000 (expected 0)
+# 637500.00 ns After reset: R23 = 0000000000000000 (expected 0)
+# 642500.00 ns After reset: R24 = 0000000000000000 (expected 0)
+# 647500.00 ns After reset: R25 = 0000000000000000 (expected 0)
+# 652500.00 ns After reset: R26 = 0000000000000000 (expected 0)
+# 657500.00 ns After reset: R27 = 0000000000000000 (expected 0)
+# 662500.00 ns After reset: R28 = 0000000000000000 (expected 0)
+# 667500.00 ns After reset: R29 = 0000000000000000 (expected 0)
+# 672500.00 ns After reset: R30 = 0000000000000000 (expected 0)
+# 677500.00 ns After reset: R31 = 0000000000000000 (expected 0)
+# ** Note: $stop    : ../src/regstim.sv(134)
+#    Time: 677500 ns  Iteration: 1  Instance: /regstim
+# Break in Module regstim at ../src/regstim.sv line 134
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/regstim_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:43:41 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 18:43:41 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:43:41 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 18:43:41 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:43:41 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 18:43:41 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:43:41 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 18:43:41 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:43:41 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 18:43:41 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:43:47 on Apr 07,2026, Elapsed time: 6:40:19
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 18:43:48 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: Design size of 6091 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlft7h1k48".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7h1k48
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 7500.00 ns Attempting overwrite of register 31, which should always be 0
+# 12500.00 ns Verifying register 31 is hardwired to 0.
+# 17500.00 ns ReadData1 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns ReadData2 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns Writing pattern to all registers.
+# 327500.00 ns Checking pattern.
+# 487500.00 ns Verifying RegWrite=0 does not overwrite register 0.
+# 492500.00 ns ReadData1 (R0) = xxxxxxxxxxxxxxxx (should match written pattern, not DEADBEEF)
+# 492500.00 ns Overwriting register 5 with 0xCAFEBABECAFEBABE.
+# 507500.00 ns ReadData1 (R5) = xxxxxxxxxxxxxxxx (expected CAFEBABEcafebabe)
+# 507500.00 ns Checking independent read ports.
+# 512500.00 ns ReadData1 (R1) = xxxxxxxxxxxxxxxx
+# 512500.00 ns ReadData2 (R2) = xxxxxxxxxxxxxxxx
+# 512500.00 ns Applying reset, all registers should clear to 0.
+# 522500.00 ns After reset: R0 = 0000000000000000 (expected 0)
+# 527500.00 ns After reset: R1 = 0000000000000000 (expected 0)
+# 532500.00 ns After reset: R2 = 0000000000000000 (expected 0)
+# 537500.00 ns After reset: R3 = 0000000000000000 (expected 0)
+# 542500.00 ns After reset: R4 = 0000000000000000 (expected 0)
+# 547500.00 ns After reset: R5 = 0000000000000000 (expected 0)
+# 552500.00 ns After reset: R6 = 0000000000000000 (expected 0)
+# 557500.00 ns After reset: R7 = 0000000000000000 (expected 0)
+# 562500.00 ns After reset: R8 = 0000000000000000 (expected 0)
+# 567500.00 ns After reset: R9 = 0000000000000000 (expected 0)
+# 572500.00 ns After reset: R10 = 0000000000000000 (expected 0)
+# 577500.00 ns After reset: R11 = 0000000000000000 (expected 0)
+# 582500.00 ns After reset: R12 = 0000000000000000 (expected 0)
+# 587500.00 ns After reset: R13 = 0000000000000000 (expected 0)
+# 592500.00 ns After reset: R14 = 0000000000000000 (expected 0)
+# 597500.00 ns After reset: R15 = 0000000000000000 (expected 0)
+# 602500.00 ns After reset: R16 = 0000000000000000 (expected 0)
+# 607500.00 ns After reset: R17 = 0000000000000000 (expected 0)
+# 612500.00 ns After reset: R18 = 0000000000000000 (expected 0)
+# 617500.00 ns After reset: R19 = 0000000000000000 (expected 0)
+# 622500.00 ns After reset: R20 = 0000000000000000 (expected 0)
+# 627500.00 ns After reset: R21 = 0000000000000000 (expected 0)
+# 632500.00 ns After reset: R22 = 0000000000000000 (expected 0)
+# 637500.00 ns After reset: R23 = 0000000000000000 (expected 0)
+# 642500.00 ns After reset: R24 = 0000000000000000 (expected 0)
+# 647500.00 ns After reset: R25 = 0000000000000000 (expected 0)
+# 652500.00 ns After reset: R26 = 0000000000000000 (expected 0)
+# 657500.00 ns After reset: R27 = 0000000000000000 (expected 0)
+# 662500.00 ns After reset: R28 = 0000000000000000 (expected 0)
+# 667500.00 ns After reset: R29 = 0000000000000000 (expected 0)
+# 672500.00 ns After reset: R30 = 0000000000000000 (expected 0)
+# 677500.00 ns After reset: R31 = 0000000000000000 (expected 0)
+# ** Note: $stop    : ../src/regstim.sv(134)
+#    Time: 677500 ns  Iteration: 1  Instance: /regstim
+# Break in Module regstim at ../src/regstim.sv line 134
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:58 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 19:00:58 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:58 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 19:00:58 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:58 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 19:00:58 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:59 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 19:00:59 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:59 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 19:00:59 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:01:03 on Apr 07,2026, Elapsed time: 0:17:15
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 19:01:03 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: Design size of 6091 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftea48er".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftea48er
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 7500.00 ns Attempting overwrite of register 31, which should always be 0
+# 12500.00 ns Verifying register 31 is hardwired to 0.
+# 17500.00 ns ReadData1 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns ReadData2 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns Writing pattern to all registers.
+# 327500.00 ns Checking pattern.
+# 487500.00 ns Verifying RegWrite=0 does not overwrite register 0.
+# 492500.00 ns ReadData1 (R0) = xxxxxxxxxxxxxxxx (should match written pattern, not DEADBEEF)
+# 492500.00 ns Overwriting register 5 with 0xCAFEBABECAFEBABE.
+# 507500.00 ns ReadData1 (R5) = xxxxxxxxxxxxxxxx (expected CAFEBABEcafebabe)
+# 507500.00 ns Checking independent read ports.
+# 512500.00 ns ReadData1 (R1) = xxxxxxxxxxxxxxxx
+# 512500.00 ns ReadData2 (R2) = xxxxxxxxxxxxxxxx
+# 512500.00 ns Applying reset, all registers should clear to 0.
+# 522500.00 ns After reset: R0 = 0000000000000000 (expected 0)
+# 527500.00 ns After reset: R1 = 0000000000000000 (expected 0)
+# 532500.00 ns After reset: R2 = 0000000000000000 (expected 0)
+# 537500.00 ns After reset: R3 = 0000000000000000 (expected 0)
+# 542500.00 ns After reset: R4 = 0000000000000000 (expected 0)
+# 547500.00 ns After reset: R5 = 0000000000000000 (expected 0)
+# 552500.00 ns After reset: R6 = 0000000000000000 (expected 0)
+# 557500.00 ns After reset: R7 = 0000000000000000 (expected 0)
+# 562500.00 ns After reset: R8 = 0000000000000000 (expected 0)
+# 567500.00 ns After reset: R9 = 0000000000000000 (expected 0)
+# 572500.00 ns After reset: R10 = 0000000000000000 (expected 0)
+# 577500.00 ns After reset: R11 = 0000000000000000 (expected 0)
+# 582500.00 ns After reset: R12 = 0000000000000000 (expected 0)
+# 587500.00 ns After reset: R13 = 0000000000000000 (expected 0)
+# 592500.00 ns After reset: R14 = 0000000000000000 (expected 0)
+# 597500.00 ns After reset: R15 = 0000000000000000 (expected 0)
+# 602500.00 ns After reset: R16 = 0000000000000000 (expected 0)
+# 607500.00 ns After reset: R17 = 0000000000000000 (expected 0)
+# 612500.00 ns After reset: R18 = 0000000000000000 (expected 0)
+# 617500.00 ns After reset: R19 = 0000000000000000 (expected 0)
+# 622500.00 ns After reset: R20 = 0000000000000000 (expected 0)
+# 627500.00 ns After reset: R21 = 0000000000000000 (expected 0)
+# 632500.00 ns After reset: R22 = 0000000000000000 (expected 0)
+# 637500.00 ns After reset: R23 = 0000000000000000 (expected 0)
+# 642500.00 ns After reset: R24 = 0000000000000000 (expected 0)
+# 647500.00 ns After reset: R25 = 0000000000000000 (expected 0)
+# 652500.00 ns After reset: R26 = 0000000000000000 (expected 0)
+# 657500.00 ns After reset: R27 = 0000000000000000 (expected 0)
+# 662500.00 ns After reset: R28 = 0000000000000000 (expected 0)
+# 667500.00 ns After reset: R29 = 0000000000000000 (expected 0)
+# 672500.00 ns After reset: R30 = 0000000000000000 (expected 0)
+# 677500.00 ns After reset: R31 = 0000000000000000 (expected 0)
+# ** Note: $stop    : ../src/regstim.sv(134)
+#    Time: 677500 ns  Iteration: 1  Instance: /regstim
+# Break in Module regstim at ../src/regstim.sv line 134
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:22:39 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 19:22:40 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:22:40 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 19:22:40 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:22:40 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 19:22:40 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:22:40 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 19:22:40 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:22:40 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 19:22:40 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:22:44 on Apr 07,2026, Elapsed time: 0:21:41
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 19:22:44 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: Design size of 6091 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftikv1dn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftikv1dn
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 7500.00 ns Attempting overwrite of register 31, which should always be 0
+# 12500.00 ns Verifying register 31 is hardwired to 0.
+# 17500.00 ns ReadData1 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns ReadData2 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns Writing pattern to all registers.
+# 327500.00 ns Checking pattern.
+# 487500.00 ns Verifying RegWrite=0 does not overwrite register 0.
+# 492500.00 ns ReadData1 (R0) = 0000000000000000 (should match written pattern, not DEADBEEF)
+# 492500.00 ns Overwriting register 5 with 0xCAFEBABECAFEBABE.
+# 507500.00 ns ReadData1 (R5) = cafebabecafebabe (expected CAFEBABEcafebabe)
+# 507500.00 ns Checking independent read ports.
+# 512500.00 ns ReadData1 (R1) = 0000010204080001
+# 512500.00 ns ReadData2 (R2) = 0000020408100002
+# 512500.00 ns Applying reset, all registers should clear to 0.
+# 522500.00 ns After reset: R0 = 0000000000000000 (expected 0)
+# 527500.00 ns After reset: R1 = 0000000000000000 (expected 0)
+# 532500.00 ns After reset: R2 = 0000000000000000 (expected 0)
+# 537500.00 ns After reset: R3 = 0000000000000000 (expected 0)
+# 542500.00 ns After reset: R4 = 0000000000000000 (expected 0)
+# 547500.00 ns After reset: R5 = 0000000000000000 (expected 0)
+# 552500.00 ns After reset: R6 = 0000000000000000 (expected 0)
+# 557500.00 ns After reset: R7 = 0000000000000000 (expected 0)
+# 562500.00 ns After reset: R8 = 0000000000000000 (expected 0)
+# 567500.00 ns After reset: R9 = 0000000000000000 (expected 0)
+# 572500.00 ns After reset: R10 = 0000000000000000 (expected 0)
+# 577500.00 ns After reset: R11 = 0000000000000000 (expected 0)
+# 582500.00 ns After reset: R12 = 0000000000000000 (expected 0)
+# 587500.00 ns After reset: R13 = 0000000000000000 (expected 0)
+# 592500.00 ns After reset: R14 = 0000000000000000 (expected 0)
+# 597500.00 ns After reset: R15 = 0000000000000000 (expected 0)
+# 602500.00 ns After reset: R16 = 0000000000000000 (expected 0)
+# 607500.00 ns After reset: R17 = 0000000000000000 (expected 0)
+# 612500.00 ns After reset: R18 = 0000000000000000 (expected 0)
+# 617500.00 ns After reset: R19 = 0000000000000000 (expected 0)
+# 622500.00 ns After reset: R20 = 0000000000000000 (expected 0)
+# 627500.00 ns After reset: R21 = 0000000000000000 (expected 0)
+# 632500.00 ns After reset: R22 = 0000000000000000 (expected 0)
+# 637500.00 ns After reset: R23 = 0000000000000000 (expected 0)
+# 642500.00 ns After reset: R24 = 0000000000000000 (expected 0)
+# 647500.00 ns After reset: R25 = 0000000000000000 (expected 0)
+# 652500.00 ns After reset: R26 = 0000000000000000 (expected 0)
+# 657500.00 ns After reset: R27 = 0000000000000000 (expected 0)
+# 662500.00 ns After reset: R28 = 0000000000000000 (expected 0)
+# 667500.00 ns After reset: R29 = 0000000000000000 (expected 0)
+# 672500.00 ns After reset: R30 = 0000000000000000 (expected 0)
+# 677500.00 ns After reset: R31 = 0000000000000000 (expected 0)
+# ** Note: $stop    : ../src/regstim.sv(134)
+#    Time: 677500 ns  Iteration: 1  Instance: /regstim
+# Break in Module regstim at ../src/regstim.sv line 134
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim/regstim_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:23:44 on Apr 07,2026
+# vlog -reportprogress 300 ../src/D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module reg64
+# -- Compiling module reg64_testbench
+# 
+# Top level modules:
+# 	reg64_testbench
+# End time: 19:23:44 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:23:44 on Apr 07,2026
+# vlog -reportprogress 300 ../src/decoders.sv 
+# -- Compiling module dec2to4
+# -- Compiling module dec2to4_testbench
+# -- Compiling module dec3to8
+# -- Compiling module dec3to8_testbench
+# -- Compiling module dec5to32
+# -- Compiling module dec5to32_testbench
+# 
+# Top level modules:
+# 	dec2to4_testbench
+# 	dec3to8_testbench
+# 	dec5to32_testbench
+# End time: 19:23:45 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:23:45 on Apr 07,2026
+# vlog -reportprogress 300 ../src/multiplexers.sv 
+# -- Compiling module mux2to1
+# -- Compiling module mux2to1_testbench
+# -- Compiling module mux32to1
+# -- Compiling module mux32to1_testbench
+# -- Compiling module mux64x32to1
+# -- Compiling module mux64x32to1_testbench
+# 
+# Top level modules:
+# 	mux2to1_testbench
+# 	mux32to1_testbench
+# 	mux64x32to1_testbench
+# End time: 19:23:45 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:23:45 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 19:23:45 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:23:45 on Apr 07,2026
+# vlog -reportprogress 300 ../src/regstim.sv 
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# End time: 19:23:45 on Apr 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:23:47 on Apr 07,2026, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work regstim 
+# Start time: 19:23:47 on Apr 07,2026
+# Loading sv_std.std
+# Loading work.regstim
+# Loading work.regfile
+# Loading work.dec5to32
+# Loading work.dec2to4
+# Loading work.dec3to8
+# Loading work.reg64
+# Loading work.mux64x32to1
+# Loading work.D_FF
+# Loading work.mux32to1
+# Loading work.mux2to1
+# ** Warning: Design size of 6091 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: brind  Hostname: BASIL  ProcessID: 7884
+#           Attempting to use alternate WLF file "./wlftz18kbn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz18kbn
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 7500.00 ns Attempting overwrite of register 31, which should always be 0
+# 12500.00 ns Verifying register 31 is hardwired to 0.
+# 17500.00 ns ReadData1 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns ReadData2 (R31) = 0000000000000000 (expected 0)
+# 17500.00 ns Writing pattern to all registers.
+# 327500.00 ns Checking pattern.
+# 487500.00 ns Verifying RegWrite=0 does not overwrite register 0.
+# 492500.00 ns ReadData1 (R0) = 0000000000000000 (should match written pattern, not DEADBEEF)
+# 492500.00 ns Overwriting register 5 with 0xCAFEBABECAFEBABE.
+# 507500.00 ns ReadData1 (R5) = cafebabecafebabe (expected CAFEBABEcafebabe)
+# 507500.00 ns Checking independent read ports.
+# 512500.00 ns ReadData1 (R1) = 0000010204080001
+# 512500.00 ns ReadData2 (R2) = 0000020408100002
+# 512500.00 ns Applying reset, all registers should clear to 0.
+# 522500.00 ns After reset: R0 = 0000000000000000 (expected 0)
+# 527500.00 ns After reset: R1 = 0000000000000000 (expected 0)
+# 532500.00 ns After reset: R2 = 0000000000000000 (expected 0)
+# 537500.00 ns After reset: R3 = 0000000000000000 (expected 0)
+# 542500.00 ns After reset: R4 = 0000000000000000 (expected 0)
+# 547500.00 ns After reset: R5 = 0000000000000000 (expected 0)
+# 552500.00 ns After reset: R6 = 0000000000000000 (expected 0)
+# 557500.00 ns After reset: R7 = 0000000000000000 (expected 0)
+# 562500.00 ns After reset: R8 = 0000000000000000 (expected 0)
+# 567500.00 ns After reset: R9 = 0000000000000000 (expected 0)
+# 572500.00 ns After reset: R10 = 0000000000000000 (expected 0)
+# 577500.00 ns After reset: R11 = 0000000000000000 (expected 0)
+# 582500.00 ns After reset: R12 = 0000000000000000 (expected 0)
+# 587500.00 ns After reset: R13 = 0000000000000000 (expected 0)
+# 592500.00 ns After reset: R14 = 0000000000000000 (expected 0)
+# 597500.00 ns After reset: R15 = 0000000000000000 (expected 0)
+# 602500.00 ns After reset: R16 = 0000000000000000 (expected 0)
+# 607500.00 ns After reset: R17 = 0000000000000000 (expected 0)
+# 612500.00 ns After reset: R18 = 0000000000000000 (expected 0)
+# 617500.00 ns After reset: R19 = 0000000000000000 (expected 0)
+# 622500.00 ns After reset: R20 = 0000000000000000 (expected 0)
+# 627500.00 ns After reset: R21 = 0000000000000000 (expected 0)
+# 632500.00 ns After reset: R22 = 0000000000000000 (expected 0)
+# 637500.00 ns After reset: R23 = 0000000000000000 (expected 0)
+# 642500.00 ns After reset: R24 = 0000000000000000 (expected 0)
+# 647500.00 ns After reset: R25 = 0000000000000000 (expected 0)
+# 652500.00 ns After reset: R26 = 0000000000000000 (expected 0)
+# 657500.00 ns After reset: R27 = 0000000000000000 (expected 0)
+# 662500.00 ns After reset: R28 = 0000000000000000 (expected 0)
+# 667500.00 ns After reset: R29 = 0000000000000000 (expected 0)
+# 672500.00 ns After reset: R30 = 0000000000000000 (expected 0)
+# 677500.00 ns After reset: R31 = 0000000000000000 (expected 0)
+# ** Note: $stop    : ../src/regstim.sv(134)
+#    Time: 677500 ns  Iteration: 1  Instance: /regstim
+# Break in Module regstim at ../src/regstim.sv line 134
