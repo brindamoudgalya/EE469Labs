@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim
 vD_FF
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1775588605
+Z2 !s110 1775613658
 !i10b 1
 !s100 1AnZTn4Cb6?m_36I2m>7G0
 IV^O<76CZFMcfI<31`FFLZ1
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 !s105 D_FF_sv_unit
 S1
 R0
-Z5 w1775588006
+Z5 w1775613562
 Z6 8../src/D_FF.sv
 Z7 F../src/D_FF.sv
 L0 3
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1775588605.000000
+Z9 !s108 1775613658.000000
 Z10 !s107 ../src/D_FF.sv|
 Z11 !s90 -reportprogress|300|../src/D_FF.sv|
 !i113 1
@@ -180,7 +180,7 @@ R3
 Z19 !s105 multiplexers_sv_unit
 S1
 R0
-Z20 w1775584710
+Z20 w1775589099
 Z21 8../src/multiplexers.sv
 Z22 F../src/multiplexers.sv
 L0 3
@@ -289,8 +289,8 @@ vmux64x32to1_testbench
 R1
 R2
 !i10b 1
-!s100 eHUZIknMELBo[bE:@cNZl3
-Im:C_<YUC@3Die;f5J3fdi2
+!s100 7ENQ4;3a5Ceb6@HnSghWD2
+I4bH?maHS;A;@:o>ELhbef0
 R3
 R19
 S1
@@ -312,8 +312,8 @@ vreg64
 R1
 R2
 !i10b 1
-!s100 DklmQHa8GiXA88G<Gg8<X3
-IOA<78ocWUji?@?j[EA6fi2
+!s100 4gUklzh5Ye<XH7PA`m3zX2
+I<kmWCPFl3HUD<:W@iDHF_1
 R3
 R4
 S1
@@ -335,8 +335,8 @@ vreg64_testbench
 R1
 R2
 !i10b 1
-!s100 dDE^W0L=mmDV3;K?8POeM1
-I_hh3zI;1OLkV0W_BKamYa1
+!s100 [@VS;@[IKI=lZho=eMJAZ3
+I8M[A1]CC?R7IMOGiOiXHj0
 R3
 R4
 S1
@@ -356,15 +356,15 @@ R11
 R12
 vregfile
 R1
-Z26 !s110 1775588606
+Z26 !s110 1775613659
 !i10b 1
-!s100 KH>a]2W8MbNZ=2d=JjkR?2
-I<k;3oSQD2WP55Rk1F^4ig1
+!s100 ni?kLSR5MVgNd<5KSNed>2
+II2c:eE:z3@1Q]gQ6c^j;N0
 R3
 !s105 regfile_sv_unit
 S1
 R0
-w1775588474
+w1775613636
 8../src/regfile.sv
 F../src/regfile.sv
 L0 3
@@ -372,7 +372,7 @@ R8
 r1
 !s85 0
 31
-R9
+Z27 !s108 1775613659.000000
 !s107 ../src/regfile.sv|
 !s90 -reportprogress|300|../src/regfile.sv|
 !i113 1
@@ -395,7 +395,7 @@ R8
 r1
 !s85 0
 31
-!s108 1775588606.000000
+R27
 !s107 ../src/regstim.sv|
 !s90 -reportprogress|300|../src/regstim.sv|
 !i113 1

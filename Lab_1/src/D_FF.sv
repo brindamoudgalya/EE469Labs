@@ -35,6 +35,7 @@ module reg64 (out, in, enable, reset, clk);
             end
         end
     endgenerate
+    assign regOut[31] = 64'b0;
 endmodule
 
 module reg64_testbench ();
