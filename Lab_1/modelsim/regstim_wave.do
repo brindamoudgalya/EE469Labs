@@ -3,17 +3,17 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate /regstim/clk
 add wave -noupdate /regstim/reset
 add wave -noupdate /regstim/RegWrite
-add wave -noupdate /regstim/WriteRegister
-add wave -noupdate /regstim/WriteData
-add wave -noupdate /regstim/ReadRegister1
-add wave -noupdate /regstim/ReadRegister2
-add wave -noupdate /regstim/ReadData1
-add wave -noupdate /regstim/ReadData2
+add wave -noupdate -radix hexadecimal /regstim/WriteRegister
+add wave -noupdate -radix hexadecimal /regstim/WriteData
+add wave -noupdate -radix hexadecimal /regstim/ReadRegister1
+add wave -noupdate -radix hexadecimal /regstim/ReadRegister2
+add wave -noupdate -radix hexadecimal /regstim/ReadData1
+add wave -noupdate -radix hexadecimal /regstim/ReadData2
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
-quietly wave cursor active 0
+quietly wave cursor active 1
 configure wave -namecolwidth 113
-configure wave -valuecolwidth 390
+configure wave -valuecolwidth 106
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
 configure wave -snapdistance 10
@@ -26,4 +26,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {758209297 ps}
+WaveRestoreZoom {0 ps} {711375 ns}

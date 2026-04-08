@@ -22,20 +22,20 @@ module reg64 (out, in, enable, reset, clk);
     genvar i, j;
     generate
         for (i = 0; i < 31; i++) begin : make_32_registers
+            logic n_enable;
+            not #(50) n(n_enable, enable[i]);
             for (j = 0; j < 64; j++) begin : dff_registers_64
                 logic din, dhold, dchange;
 
-                not #(50) n(n_enable, enable[i]);
                 and #(50) a0(dhold, n_enable, out[i][j]);
                 and #(50) a1(dchange, enable[i], in[j]);
-
                 or #(50) o_reg64(din, dhold, dchange);
 
                 D_FF d(out[i][j], din, reset, clk);
             end
         end
     endgenerate
-    assign regOut[31] = 64'b0;
+    assign out[31] = 64'b0;
 endmodule
 
 module reg64_testbench ();
