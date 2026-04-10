@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/brind/Brinda_Files/University/Junior/EE469/EE469Labs/Lab_1/modelsim
 vD_FF
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1775615024
+Z2 !s110 1775844527
 !i10b 1
 !s100 1AnZTn4Cb6?m_36I2m>7G0
 IV^O<76CZFMcfI<31`FFLZ1
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1775615024.000000
+Z9 !s108 1775844527.000000
 Z10 !s107 ../src/D_FF.sv|
 Z11 !s90 -reportprogress|300|../src/D_FF.sv|
 !i113 1
@@ -34,278 +34,278 @@ Z12 tCvgOpt 0
 n@d_@f@f
 vdec2to4
 R1
-Z13 !s110 1775615025
+R2
 !i10b 1
 !s100 mHndQlcfckhFoE34Ank<P2
 IPCPcb3;>>=2M?XBPTzmVo3
 R3
-Z14 !s105 decoders_sv_unit
+Z13 !s105 decoders_sv_unit
 S1
 R0
-Z15 w1775499023
-Z16 8../src/decoders.sv
-Z17 F../src/decoders.sv
+Z14 w1775499023
+Z15 8../src/decoders.sv
+Z16 F../src/decoders.sv
 L0 3
 R8
 r1
 !s85 0
 31
 R9
-Z18 !s107 ../src/decoders.sv|
-Z19 !s90 -reportprogress|300|../src/decoders.sv|
+Z17 !s107 ../src/decoders.sv|
+Z18 !s90 -reportprogress|300|../src/decoders.sv|
 !i113 1
 R12
 vdec2to4_testbench
 R1
-R13
+R2
 !i10b 1
 !s100 ;_`K`O0fHKdWAjogiSTUP1
 IUS1V@1W7?M>WOD:YTmh1b0
 R3
-R14
+R13
 S1
 R0
+R14
 R15
 R16
-R17
 L0 24
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 vdec3to8
 R1
-R13
+R2
 !i10b 1
 !s100 eIIdLVGgT6G<A7BOWOf?M0
 IMKVj7LaYJJ6OzcAfm1`i22
 R3
-R14
+R13
 S1
 R0
+R14
 R15
 R16
-R17
 L0 58
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 vdec3to8_testbench
 R1
-R13
+R2
 !i10b 1
 !s100 R`U]2k?h8?4>l=Lc]1AGG0
 IjTo7GhcmG:zTb0<dZiz7;1
 R3
-R14
+R13
 S1
 R0
+R14
 R15
 R16
-R17
 L0 83
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 vdec5to32
 R1
-R13
+R2
 !i10b 1
 !s100 Hi?l9CN]_IC5V_=SX55]E0
 IbYh4gCIeJ<6OAhYMYkS]d3
 R3
-R14
+R13
 S1
 R0
+R14
 R15
 R16
-R17
 L0 117
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 vdec5to32_testbench
 R1
-R13
+R2
 !i10b 1
 !s100 NVcgL>XNT]Fkj`fmdh^RE2
 IQKBgiCKmz]ojF9QMS1PEU3
 R3
-R14
+R13
 S1
 R0
+R14
 R15
 R16
-R17
 L0 132
 R8
 r1
 !s85 0
 31
 R9
+R17
 R18
-R19
 !i113 1
 R12
 vmux2to1
 R1
-R13
+R2
 !i10b 1
 !s100 G7?M8azFF<mXVdJ=4>1jA2
 IFzzFNWe47>_An?QRC991a3
 R3
-Z20 !s105 multiplexers_sv_unit
+Z19 !s105 multiplexers_sv_unit
 S1
 R0
-Z21 w1775589099
-Z22 8../src/multiplexers.sv
-Z23 F../src/multiplexers.sv
+Z20 w1775589099
+Z21 8../src/multiplexers.sv
+Z22 F../src/multiplexers.sv
 L0 3
 R8
 r1
 !s85 0
 31
-Z24 !s108 1775615025.000000
-Z25 !s107 ../src/multiplexers.sv|
-Z26 !s90 -reportprogress|300|../src/multiplexers.sv|
+R9
+Z23 !s107 ../src/multiplexers.sv|
+Z24 !s90 -reportprogress|300|../src/multiplexers.sv|
 !i113 1
 R12
 vmux2to1_testbench
 R1
-R13
+R2
 !i10b 1
 !s100 cOiaE[EE9@FFEklSHXPVm3
 IK[]>7iK41GSij;CRSW_Bz3
 R3
-R20
+R19
 S1
 R0
+R20
 R21
 R22
-R23
-Z27 L0 16
+Z25 L0 16
 R8
 r1
 !s85 0
 31
+R9
+R23
 R24
-R25
-R26
 !i113 1
 R12
 vmux32to1
 R1
-R13
+R2
 !i10b 1
 !s100 <d_:lQ7N8MMP@N2U=hNkB2
 INDl99gmdZkiR1BSjPZ`?Z1
 R3
-R20
+R19
 S1
 R0
+R20
 R21
 R22
-R23
 L0 56
 R8
 r1
 !s85 0
 31
+R9
+R23
 R24
-R25
-R26
 !i113 1
 R12
 vmux32to1_testbench
 R1
-R13
+R2
 !i10b 1
 !s100 l[Y9z]DFUQ8;OAU3_9ZoS2
 IL@8McdkaQIoj3RSZJK60:1
 R3
-R20
+R19
 S1
 R0
+R20
 R21
 R22
-R23
 L0 85
 R8
 r1
 !s85 0
 31
+R9
+R23
 R24
-R25
-R26
 !i113 1
 R12
 vmux64x32to1
 R1
-R13
+R2
 !i10b 1
 !s100 oGARKIzJ;eR9OOmR51A:`3
 IM1a;Nh7Wm_0TUljY^b<N81
 R3
-R20
+R19
 S1
 R0
+R20
 R21
 R22
-R23
 L0 121
 R8
 r1
 !s85 0
 31
+R9
+R23
 R24
-R25
-R26
 !i113 1
 R12
 vmux64x32to1_testbench
 R1
-R13
+R2
 !i10b 1
 !s100 7ENQ4;3a5Ceb6@HnSghWD2
 I4bH?maHS;A;@:o>ELhbef0
 R3
-R20
+R19
 S1
 R0
+R20
 R21
 R22
-R23
 L0 139
 R8
 r1
 !s85 0
 31
+R9
+R23
 R24
-R25
-R26
 !i113 1
 R12
 vreg64
@@ -321,7 +321,7 @@ R0
 R5
 R6
 R7
-R27
+R25
 R8
 r1
 !s85 0
@@ -356,7 +356,7 @@ R11
 R12
 vregfile
 R1
-R13
+R2
 !i10b 1
 !s100 A_blnlmP8CKf_AcCMbn5W1
 IjBg9igmhRLTB936jFTSXL1
@@ -372,22 +372,22 @@ R8
 r1
 !s85 0
 31
-R24
+R9
 !s107 ../src/regfile.sv|
 !s90 -reportprogress|300|../src/regfile.sv|
 !i113 1
 R12
 vregstim
 R1
-R13
+!s110 1775844528
 !i10b 1
-!s100 VJokagF7[DTMQzDMLA8bI3
-I@fU`jLb6iYM<Id6h?S;6Q0
+!s100 lF1LT77eK>A]DYT^XmK@52
+I1Mmb3a_OmlQVMn4`g21j=2
 R3
 !s105 regstim_sv_unit
 S1
 R0
-w1775588120
+w1775842431
 8../src/regstim.sv
 F../src/regstim.sv
 L0 4
@@ -395,7 +395,7 @@ R8
 r1
 !s85 0
 31
-R24
+R9
 !s107 ../src/regstim.sv|
 !s90 -reportprogress|300|../src/regstim.sv|
 !i113 1
