@@ -1,5 +1,5 @@
 
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 module mux2to1 (out, in0, in1, sel);
     output logic out;
     input logic in0, in1, sel;

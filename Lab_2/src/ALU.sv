@@ -1,5 +1,5 @@
 
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 module adder (sum, zero, overflow, carry_out, negative, A, B);
     output logic [63:0] sum;
     output logic zero, overflow, carry_out, negative;

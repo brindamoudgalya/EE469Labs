@@ -1,5 +1,5 @@
 
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 module dec2to4 (out, in, enable);
     output logic [3:0] out;
     input logic [1:0] in;
