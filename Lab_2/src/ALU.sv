@@ -6,11 +6,20 @@ module alu (out, zero, overflow, carry_out, negative, control, A, B);
     input logic [2:0] control;
     input logic [63:0] A, B;
 
+    logic [63:0] notB;
+
     logic add_out, sub_out, and_out, or_out, xor_out;
     logic add_zero, sub_zero, and_zero, or_zero, xor_zero;
     logic add_negative, sub_negative, and_negative, or_negative, xor_negative;
     logic add_overflow, sub_overflow;
     logic add_carry_out, sub_carry_out;
+
+    genvar i;
+    generate
+        for (i = 0; i < 64; i++) begin : invert_B
+            not #(50) n1(notB[i], B[i]);
+        end
+    endgenerate
 
     logic [7:0] temp_overall_out;
 
@@ -21,10 +30,10 @@ module alu (out, zero, overflow, carry_out, negative, control, A, B);
     //empty for now
 
     // 010:
-    adder add(add_out, add_zero, add_overflow, add_carry_out, add_negative, A, B);
+    adder add(add_out, add_zero, add_overflow, add_carry_out, add_negative, A, B, 1'b0);
 
     // 011:
-    adder sub(sub_out, sub_zero, sub_overflow, sub_carry_out, sub_negative, A, B);
+    adder sub(sub_out, sub_zero, sub_overflow, sub_carry_out, sub_negative, A, notB, 1'b1);
 
     // 100:
     and64 a64(and_out, and_zero, and_negative, A, B);
@@ -38,21 +47,26 @@ module alu (out, zero, overflow, carry_out, negative, control, A, B);
     // 111:
     // empty for now
 
-    assign temp_overall_out[0] = B[0];
-    assign temp_overall_out[1] = 1'b0;
-    assign temp_overall_out[2] = add_out;
-    assign temp_overall_out[3] = sub_out;
-    assign temp_overall_out[4] = and_out;
-    assign temp_overall_out[5] = or_out;
-    assign temp_overall_out[6] = xor_out;
-    assign temp_overall_out[7] = 1'b0;
+    // assign temp_overall_out[0] = B[0];
+    // assign temp_overall_out[1] = 1'b0;
+    // assign temp_overall_out[2] = add_out;
+    // assign temp_overall_out[3] = sub_out;
+    // assign temp_overall_out[4] = and_out;
+    // assign temp_overall_out[5] = or_out;
+    // assign temp_overall_out[6] = xor_out;
+    // assign temp_overall_out[7] = 1'b0;
 
-    genvar i;
     generate
-        for (i = 0; i < 64; i++) begin : alu_64_mux
-            mux8to1 m81(out[i], temp_overall_out, control);
+        for (i = 0; i < 64; i++) begin : alu_64_mux_out
+            mux8to1 m81(out[i], {1'b0, xor_out[i], or_out[i], and_out[i], sub_out[i], add_out[i], 1'b0, B[i]}, control);
         end
     endgenerate
+
+    // generate
+    //     for (i = 0; i < 64; i++) begin : alu_64_mux_out
+    //         mux8to1 m81(out[i], temp_overall_out, control);
+    //     end
+    // endgenerate
 
     mux2to1 m21_1(overflow, add_overflow, sub_overflow, control[2]);
     mux2to1 m21_2(carry_out, add_carry_out, sub_carry_out, control[2]);
@@ -80,7 +94,7 @@ module mux8to1 (out, in, sel);
         end
     endgenerate
     
-    mux2to1 final_m(out, l1out[0], l3out[1], sel[2]);
+    mux2to1 final_m(out, l1out[0], l1out[1], sel[2]);
 endmodule
 
 module and64 (out, zero, negative, A, B);
@@ -349,14 +363,15 @@ module xor64_testbench();
 endmodule
 
 
-module adder (sum, zero, overflow, carry_out, negative, A, B);
+module adder (sum, zero, overflow, carry_out, negative, A, B, carry_in);
     output logic [63:0] sum;
     output logic zero, overflow, carry_out, negative;
     input logic [63:0] A, B;
+    input logic carry_in;
 
     logic [63:0] c_out;
     logic [64:0] c_in;
-    assign c_in[0] = 1'b0;
+    assign c_in[0] = carry_in;
 
     genvar i;
     generate
@@ -522,6 +537,7 @@ module set_zero (zero, sum);
     output logic zero;
     input logic [63:0] sum;
 
+    genvar i;
     generate
         logic [15:0] l1_out;
         logic [3:0] l2_out;
