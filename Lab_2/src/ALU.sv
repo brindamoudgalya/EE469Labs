@@ -1,14 +1,14 @@
 
 `timescale 1ps/1ps
-module alu (out, zero, overflow, carry_out, negative, control, A, B);
-    output logic [63:0] out;
+module alu (A, B, cntrl, result, negative, zero, overflow, carry_out);
+    output logic [63:0] result;
     output logic zero, overflow, carry_out, negative;
-    input logic [2:0] control;
+    input logic [2:0] cntrl;
     input logic [63:0] A, B;
 
     logic [63:0] notB;
 
-    logic add_out, sub_out, and_out, or_out, xor_out;
+    logic [63:0] add_out, sub_out, and_out, or_out, xor_out;
     logic add_zero, sub_zero, and_zero, or_zero, xor_zero;
     logic add_negative, sub_negative, and_negative, or_negative, xor_negative;
     logic add_overflow, sub_overflow;
@@ -58,7 +58,7 @@ module alu (out, zero, overflow, carry_out, negative, control, A, B);
 
     generate
         for (i = 0; i < 64; i++) begin : alu_64_mux_out
-            mux8to1 m81(out[i], {1'b0, xor_out[i], or_out[i], and_out[i], sub_out[i], add_out[i], 1'b0, B[i]}, control);
+            mux8to1 m81(result[i], {1'b0, xor_out[i], or_out[i], and_out[i], sub_out[i], add_out[i], 1'b0, B[i]}, cntrl);
         end
     endgenerate
 
@@ -68,11 +68,11 @@ module alu (out, zero, overflow, carry_out, negative, control, A, B);
     //     end
     // endgenerate
 
-    mux2to1 m21_1(overflow, add_overflow, sub_overflow, control[2]);
-    mux2to1 m21_2(carry_out, add_carry_out, sub_carry_out, control[2]);
+    mux2to1 m21_1(overflow, add_overflow, sub_overflow, cntrl[2]);
+    mux2to1 m21_2(carry_out, add_carry_out, sub_carry_out, cntrl[2]);
 
-    set_zero z(zero, out); // set zero flag
-    assign negative = out[63]; // set negative flag
+    set_zero z(zero, result); // set zero flag
+    assign negative = result[63]; // set negative flag
 
 endmodule
 

@@ -38,6 +38,21 @@ module alustim();
 	logic [63:0] test_val;
 	initial begin
 	
+		// $display("%t testing PASS_A operations", $time);
+		// cntrl = ALU_PASS_B;
+		// for (i=0; i<100; i++) begin
+		// 	A = $random(); B = $random();
+		// 	#(delay);
+		// 	assert(result == B && negative == B[63] && zero == (B == '0));
+		// end
+		
+		// $display("%t testing addition", $time);
+		// cntrl = ALU_ADD;
+		// A = 64'h0000000000000001; B = 64'h0000000000000001;
+		// #(delay);
+		// assert(result == 64'h0000000000000002 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 0);
+		
+		// ORIGINAL TESTBENCH IS JUST THE STUFF THAT'S COMMENTED UP ABOVE. I'LL TEST IT ALL DOWN HERE:
 		$display("%t testing PASS_A operations", $time);
 		cntrl = ALU_PASS_B;
 		for (i=0; i<100; i++) begin
@@ -45,12 +60,47 @@ module alustim();
 			#(delay);
 			assert(result == B && negative == B[63] && zero == (B == '0));
 		end
-		
-		$display("%t testing addition", $time);
+		$display("%t testing PASS_A operations", $time);
 		cntrl = ALU_ADD;
-		A = 64'h0000000000000001; B = 64'h0000000000000001;
-		#(delay);
-		assert(result == 64'h0000000000000002 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 0);
-		
+		for (i=0; i<100; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == B && negative == B[63] && zero == (B == '0));
+		end
+		$display("%t testing PASS_A operations", $time);
+		cntrl = ALU_SUBTRACT;
+		for (i=0; i<100; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == B && negative == B[63] && zero == (B == '0));
+		end
+		$display("%t testing PASS_A operations", $time);
+		cntrl = ALU_AND;
+		for (i=0; i<100; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == B && negative == B[63] && zero == (B == '0));
+		end
+		$display("%t testing PASS_A operations", $time);
+		cntrl = ALU_OR;
+		for (i=0; i<100; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == B && negative == B[63] && zero == (B == '0));
+		end
+		$display("%t testing PASS_A operations", $time);
+		cntrl = ALU_XOR;
+		for (i=0; i<100; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == B && negative == B[63] && zero == (B == '0));
+		end
+		$display("%t testing PASS_A operations", $time);
+		cntrl = 3'b111;
+		for (i=0; i<100; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == B && negative == B[63] && zero == (B == '0));
+		end
 	end
 endmodule
