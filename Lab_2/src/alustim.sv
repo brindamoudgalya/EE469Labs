@@ -1,5 +1,5 @@
 // Test bench for ALU
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 
 // Meaning of signals in and out of the ALU:
 

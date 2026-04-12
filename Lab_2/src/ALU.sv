@@ -1,5 +1,5 @@
 
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 module alu (out, zero, overflow, carry_out, negative, control, A, B);
     output logic [63:0] out;
     output logic zero, overflow, carry_out, negative;
