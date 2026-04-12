@@ -1,5 +1,354 @@
 
 `timescale 1ns/10ps
+module alu (out, zero, overflow, carry_out, negative, control, A, B);
+    output logic [63:0] out;
+    output logic zero, overflow, carry_out, negative;
+    input logic [2:0] control;
+    input logic [63:0] A, B;
+
+    logic add_out, sub_out, and_out, or_out, xor_out;
+    logic add_zero, sub_zero, and_zero, or_zero, xor_zero;
+    logic add_negative, sub_negative, and_negative, or_negative, xor_negative;
+    logic add_overflow, sub_overflow;
+    logic add_carry_out, sub_carry_out;
+
+    logic [7:0] temp_overall_out;
+
+    // 000:
+    // B is just the 64 bit input B
+
+    // 001:
+    //empty for now
+
+    // 010:
+    adder add(add_out, add_zero, add_overflow, add_carry_out, add_negative, A, B);
+
+    // 011:
+    adder sub(sub_out, sub_zero, sub_overflow, sub_carry_out, sub_negative, A, B);
+
+    // 100:
+    and64 a64(and_out, and_zero, and_negative, A, B);
+
+    // 101:
+    or64 o64(or_out, or_zero, or_negative, A, B);
+
+    // 110:
+    xor64 x64(xor_out, xor_zero, xor_negative, A, B);
+
+    // 111:
+    // empty for now
+
+    assign temp_overall_out[0] = B[0];
+    assign temp_overall_out[1] = 1'b0;
+    assign temp_overall_out[2] = add_out;
+    assign temp_overall_out[3] = sub_out;
+    assign temp_overall_out[4] = and_out;
+    assign temp_overall_out[5] = or_out;
+    assign temp_overall_out[6] = xor_out;
+    assign temp_overall_out[7] = 1'b0;
+
+    genvar i;
+    generate
+        for (i = 0; i < 64; i++) begin : alu_64_mux
+            mux8to1 m81(out[i], temp_overall_out, control);
+        end
+    endgenerate
+
+    mux2to1 m21_1(overflow, add_overflow, sub_overflow, control[2]);
+    mux2to1 m21_2(carry_out, add_carry_out, sub_carry_out, control[2]);
+
+    set_zero z(zero, out); // set zero flag
+    assign negative = out[63]; // set negative flag
+
+endmodule
+
+module mux8to1 (out, in, sel);
+    output logic out;
+    input logic [7:0] in;
+    input logic [2:0] sel;
+
+    logic [3:0] l0out;
+    logic [1:0] l1out;
+
+    genvar i;
+    generate
+        for (i=0; i < 4; i++) begin : l0
+            mux2to1 m(l0out[i], in[2*i], in[2*i + 1], sel[0]);
+        end
+        for (i=0; i < 2; i++) begin : l1
+            mux2to1 m(l1out[i], l0out[2*i], l0out[2*i + 1], sel[1]);
+        end
+    endgenerate
+    
+    mux2to1 final_m(out, l1out[0], l3out[1], sel[2]);
+endmodule
+
+module and64 (out, zero, negative, A, B);
+    output logic [63:0] out;
+    output logic zero, negative;
+    input logic [63:0] A, B;
+
+    genvar i;
+    generate
+        for (i = 0; i < 64; i++) begin : and64_gen
+            and #(50) a_i(out[i], A[i], B[i]);
+        end
+    endgenerate
+
+    assign negative = out[63]; // set negative flag
+
+    // set zero flag (could modularize but i'm too lazy.)
+    generate
+        logic [15:0] l1_out;
+        logic [3:0] l2_out;
+        for (i=0; i<16; i++) begin : zero_tree_1
+            logic n1, n2, n3, n4;
+            not #(50) n_1(n1, out[i*4]);
+            not #(50) n_2(n2, out[i*4 + 1]);
+            not #(50) n_3(n3, out[i*4 + 2]);
+            not #(50) n_4(n4, out[i*4 + 3]);
+
+            and #(50) a1(l1_out[i], n1, n2, n3, n4);
+        end
+        for (i=0; i<4; i++) begin : zero_tree_2
+            and #(50) a2(l2_out[i], l1_out[i*4], l1_out[i*4 + 1], l1_out[i*4 + 2], l1_out[i*4 + 3]);
+        end
+    
+        and #(50) a3(zero, l2_out[0], l2_out[1], l2_out[2], l2_out[3]);
+    endgenerate
+endmodule
+
+module and64_testbench();
+    logic [63:0] out;
+    logic zero, negative;
+    logic [63:0] A, B;
+
+    logic clk;
+
+    and64 dut (.*);
+
+    parameter clk_period = 5000;
+    initial begin
+        clk <= 0;
+        forever #(clk_period/2) clk <= ~clk;
+    end // initial clock
+
+    integer i; 
+	initial begin
+        A = 64'd32048757332184;
+        B = 64'd18374639302174648;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        A = 64'd37465648292192;
+        B = 64'd0284748266;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        A = 64'hFFFFFFFFFFFFFFFF;
+        B = 64'hFFFFFFFFFFFFFFFF; // out should be negative
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        A = 64'hF000000000000000;
+        B = 64'hFFFFFFFFFFFFFFFF; // out should be negative
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        A = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+        B = 64'b0000000000000000000000000000000000000000000000000000000000000000; // out should be 0
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        $stop;
+    end
+endmodule
+
+module or64(out, zero, negative, A, B);
+    output logic [63:0] out;
+    output logic zero, negative;
+    input logic [63:0] A, B;
+
+    genvar i;
+    generate
+        for (i = 0; i < 64; i++) begin : or64_gen
+            or #(50) a_i(out[i], A[i], B[i]);
+        end
+    endgenerate
+
+    assign negative = out[63]; // set negative flag
+
+    // set zero flag
+    generate
+        logic [15:0] l1_out;
+        logic [3:0] l2_out;
+        for (i=0; i<16; i++) begin : zero_tree_1
+            logic n1, n2, n3, n4;
+            not #(50) n_1(n1, out[i*4]);
+            not #(50) n_2(n2, out[i*4 + 1]);
+            not #(50) n_3(n3, out[i*4 + 2]);
+            not #(50) n_4(n4, out[i*4 + 3]);
+
+            and #(50) a1(l1_out[i], n1, n2, n3, n4);
+        end
+        for (i=0; i<4; i++) begin : zero_tree_2
+            and #(50) a2(l2_out[i], l1_out[i*4], l1_out[i*4 + 1], l1_out[i*4 + 2], l1_out[i*4 + 3]);
+        end
+    
+        and #(50) a3(zero, l2_out[0], l2_out[1], l2_out[2], l2_out[3]);
+    endgenerate
+endmodule
+
+module or64_testbench();
+    logic [63:0] out;
+    logic zero, negative;
+    logic [63:0] A, B;
+
+    logic clk;
+
+    or64 dut (.*);
+
+    parameter clk_period = 5000;
+    initial begin
+        clk <= 0;
+        forever #(clk_period/2) clk <= ~clk;
+    end // initial clock
+
+    integer i; 
+	initial begin
+        A = 64'd32048757332184;
+        B = 64'd18374639302174648;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        A = 64'd37465648292192;
+        B = 64'd0284748266;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        $stop;
+    end
+endmodule
+
+module xor64(out, zero, negative, A, B);
+    output logic [63:0] out;
+    output logic zero, negative;
+    input logic [63:0] A, B;
+
+    genvar i;
+    generate
+        for (i = 0; i < 64; i++) begin : xor64_gen
+            xor #(50) a_i(out[i], A[i], B[i]);
+        end
+    endgenerate
+
+    assign negative = out[63]; // set negative flag
+
+    // set zero flag
+    generate
+        logic [15:0] l1_out;
+        logic [3:0] l2_out;
+        for (i=0; i<16; i++) begin : zero_tree_1
+            logic n1, n2, n3, n4;
+            not #(50) n_1(n1, out[i*4]);
+            not #(50) n_2(n2, out[i*4 + 1]);
+            not #(50) n_3(n3, out[i*4 + 2]);
+            not #(50) n_4(n4, out[i*4 + 3]);
+
+            and #(50) a1(l1_out[i], n1, n2, n3, n4);
+        end
+        for (i=0; i<4; i++) begin : zero_tree_2
+            and #(50) a2(l2_out[i], l1_out[i*4], l1_out[i*4 + 1], l1_out[i*4 + 2], l1_out[i*4 + 3]);
+        end
+    
+        and #(50) a3(zero, l2_out[0], l2_out[1], l2_out[2], l2_out[3]);
+    endgenerate
+endmodule
+
+module xor64_testbench();
+    logic [63:0] out;
+    logic zero, negative;
+    logic [63:0] A, B;
+
+    logic clk;
+
+    xor64 dut (.*);
+
+    parameter clk_period = 5000;
+    initial begin
+        clk <= 0;
+        forever #(clk_period/2) clk <= ~clk;
+    end // initial clock
+
+    integer i; 
+	initial begin
+        A = 64'd32048757332184;
+        B = 64'd18374639302174648;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+
+        A = 64'd37465648292192;
+        B = 64'd0284748266;
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        @(posedge clk);
+        $stop;
+    end
+endmodule
+
+
 module adder (sum, zero, overflow, carry_out, negative, A, B);
     output logic [63:0] sum;
     output logic zero, overflow, carry_out, negative;
@@ -29,30 +378,30 @@ module adder (sum, zero, overflow, carry_out, negative, A, B);
         end
     endgenerate
 
-    xor #(50) v(overflow, c_in[63], c_out[63]); // set overflow flag (for 2C addition)
-    // assign overflow = c_in[64]; // unsigned addition: if there is overall c_out at all, it's overflow
-    assign negative = sum[63]; // set negative flag
+    // xor #(50) v(overflow, c_in[63], c_out[63]); // set overflow flag (for 2C addition)
+    assign overflow = c_in[64]; // unsigned addition: if there is overall c_out at all, it's overflow
+    // assign negative = sum[63]; // set negative flag
     assign carry_out = c_out[63]; // assign carryout
 
-    // set zero flag
-    generate
-        logic [15:0] l1_out;
-        logic [3:0] l2_out;
-        for (i=0; i<16; i++) begin : zero_tree_1
-            logic n1, n2, n3, n4;
-            not #(50) n_1(n1, sum[i*4]);
-            not #(50) n_2(n2, sum[i*4 + 1]);
-            not #(50) n_3(n3, sum[i*4 + 2]);
-            not #(50) n_4(n4, sum[i*4 + 3]);
+    // // set zero flag
+    // generate
+    //     logic [15:0] l1_out;
+    //     logic [3:0] l2_out;
+    //     for (i=0; i<16; i++) begin : zero_tree_1
+    //         logic n1, n2, n3, n4;
+    //         not #(50) n_1(n1, sum[i*4]);
+    //         not #(50) n_2(n2, sum[i*4 + 1]);
+    //         not #(50) n_3(n3, sum[i*4 + 2]);
+    //         not #(50) n_4(n4, sum[i*4 + 3]);
 
-            and #(50) a1(l1_out[i], n1, n2, n3, n4);
-        end
-        for (i=0; i<4; i++) begin : zero_tree_2
-            and #(50) a2(l2_out[i], l1_out[i*4], l1_out[i*4 + 1], l1_out[i*4 + 2], l1_out[i*4 + 3]);
-        end
+    //         and #(50) a1(l1_out[i], n1, n2, n3, n4);
+    //     end
+    //     for (i=0; i<4; i++) begin : zero_tree_2
+    //         and #(50) a2(l2_out[i], l1_out[i*4], l1_out[i*4 + 1], l1_out[i*4 + 2], l1_out[i*4 + 3]);
+    //     end
     
-        and #(50) a3(zero, l2_out[0], l2_out[1], l2_out[2], l2_out[3]);
-    endgenerate
+    //     and #(50) a3(zero, l2_out[0], l2_out[1], l2_out[2], l2_out[3]);
+    // endgenerate
 endmodule
 
 module adder_testbench();
@@ -167,4 +516,28 @@ module adder_testbench();
 
         $stop;
     end
+endmodule
+
+module set_zero (zero, sum);
+    output logic zero;
+    input logic [63:0] sum;
+
+    generate
+        logic [15:0] l1_out;
+        logic [3:0] l2_out;
+        for (i=0; i<16; i++) begin : zero_tree_1
+            logic n1, n2, n3, n4;
+            not #(50) n_1(n1, sum[i*4]);
+            not #(50) n_2(n2, sum[i*4 + 1]);
+            not #(50) n_3(n3, sum[i*4 + 2]);
+            not #(50) n_4(n4, sum[i*4 + 3]);
+
+            and #(50) a1(l1_out[i], n1, n2, n3, n4);
+        end
+        for (i=0; i<4; i++) begin : zero_tree_2
+            and #(50) a2(l2_out[i], l1_out[i*4], l1_out[i*4 + 1], l1_out[i*4 + 2], l1_out[i*4 + 3]);
+        end
+    
+        and #(50) a3(zero, l2_out[0], l2_out[1], l2_out[2], l2_out[3]);
+    endgenerate
 endmodule
