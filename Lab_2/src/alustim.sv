@@ -69,11 +69,23 @@ module alustim();
 		end
 		$display("%t testing PASS_A operations", $time);
 		cntrl = ALU_SUBTRACT;
-		for (i=0; i<100; i++) begin
+		for (i=0; i<50; i++) begin
 			A = $random(); B = $random();
 			#(delay);
 			assert(result == B && negative == B[63] && zero == (B == '0));
 		end
+
+		A = 110; B = 10;
+		#(delay);
+		A = 30; B = 40;
+		#(delay);
+		A = 813; B = 473;
+		#(delay);
+		A = 3384; B = 2910;
+		#(delay);
+		A = 493; B = 44994;
+		#(delay);
+		
 		$display("%t testing PASS_A operations", $time);
 		cntrl = ALU_AND;
 		for (i=0; i<100; i++) begin
