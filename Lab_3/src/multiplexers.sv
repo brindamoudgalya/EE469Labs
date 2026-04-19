@@ -38,19 +38,6 @@ module mux2to1_testbench ();
     end
 endmodule
 
-// module mux64x2to1 (out, in0, in1, sel);
-//     output logic [63:0] out;
-//     input logic [63:0] in0, in1;
-//     input logic sel;
-
-//     genvar i;
-//     generate
-//         for (i=0; i < 64; i++) begin : mux1
-//             2to1mux m(out[i], in0[i], in1[i], sel);
-//         end
-//     endgenerate
-// endmodule
-
 // ------------------------------------------------------------
 
 module mux32to1 (out, in, sel);
@@ -118,6 +105,8 @@ module mux32to1_testbench();
 
 endmodule
 
+// -----------------------------------------------------------------------------
+
 module mux64x32to1 (out, in, sel);
     output logic [63:0] out;
     input logic [31:0][63:0] in;
@@ -170,4 +159,47 @@ module mux64x32to1_testbench ();
         end
         $stop;
     end
+endmodule
+
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+
+// lab3:
+
+module mux64x2to1 (out, in0, in1, sel);
+    output logic [63:0] out;
+    input logic [63:0] in0, in1;
+    input logic sel;
+
+    genvar i;
+    generate
+        for (i=0; i < 64; i++) begin : mux1
+            mux2to1 m(out[i], in0[i], in1[i], sel);
+        end
+    endgenerate
+endmodule
+
+module mux64x4to1 (out, in0, in1, in2, in3, sel);
+    output logic [63:0] out;
+    input logic [63:0] in0, in1, in2, in3;
+    input logic [1:0] sel;
+
+    logic [63:0] lower_m, upper_m;
+
+    mux64x2to1 m0(lower_m, in0, in1, sel[0]);
+    mux64x2to1 m1(upper_m, in2, in3, sel[0]);
+    mux64x2to1 m2(out, lower_m, upper_m, sel[1]); // CHECK (TODO): is order correct?
+endmodule
+
+module mux5x2to1 (out, in0, in1, sel);
+    output logic [4:0] out;
+    input logic [4:0] in0, in1;
+    input logic sel;
+
+    genvar i;
+    generate
+        for (i=0; i < 5; i++) begin : mux1
+            mux2to1 m(out[i], in0[i], in1[i], sel);
+        end
+    endgenerate
 endmodule
