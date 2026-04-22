@@ -5,10 +5,10 @@ module cpu (clk, reset);
     input logic clk, reset;
 
     // pc, instruction fetch
-    logic [63:0] pc_curr, pc_next, pc_plus4, pc_plus_imm, br_target, shifted_imm;
+    logic [63:0] pc, pc_next, pc_plus4, pc_plus_imm, br_target, shifted_imm;
     logic [31:0] instr;
 
-    pc_adder p(.pc_plus4(pc), .pc_curr(pc_next), .clk(clk), .reset(reset));
+    pc_reg p(.pc_out(pc), .pc_in(pc_next), .clk(clk), .reset(reset));
 
     logic f1, f2, f3, f4;
     adder pc_add4 (.sum(pc_plus4), .zero(f1), .overflow(f2), .carry_out(f3), .negative(f4), .A(pc), .B(64'd4), .carry_in(1'b0));
@@ -79,7 +79,7 @@ module cpu (clk, reset);
         .write_data(ReadData2), .clk(clk), .xfer_size(4'b1000), .read_data(read_data));
     
     // mux write data (00 = ALU, 01 = Memory, 10 = PC+4 (BL))
-    mux64x2to1 memtoreg(.out(WriteData), .in0(alu_out), .in1(read_data), 
+    mux64x4to1 memtoreg(.out(WriteData), .in0(alu_out), .in1(read_data), 
         .in2(pc_plus4), .in3(64'b0), .sel(MemToReg));
 
     // ------------------------------------------------------------------------------------------------
