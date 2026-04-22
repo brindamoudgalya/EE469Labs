@@ -1,7 +1,7 @@
 `timescale 1ps/1ps
-module main_control (instruction, ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, ALUOp, MemToReg, Branch, UncondBranch, SetFlags, ImmSel);
+module main_control (instruction, ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, ALUOp, MemToReg, Branch, UncondBranch, SetFlags, ImmSel, CBranchSel, WriteRegSel, CondBranch);
     input logic [31:0] instruction;
-    output logic ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, Branch, UncondBranch, SetFlags;
+    output logic ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, Branch, UncondBranch, SetFlags, CBranchSel, WriteRegSel, CondBranch;
     output logic [1:0] ALUOp, MemToReg, ImmSel;
 
     // ALUOp:       00: Load/Store  01: [C]Branch   10: Arithmetic
@@ -14,6 +14,7 @@ module main_control (instruction, ALUSource, RegWrite, MemRead, MemWrite, Reg2Lo
         // defaults
         Reg2Loc = 0; ALUSource = 0; Branch = 0; RegWrite = 0; 
         MemRead = 0; MemWrite = 0; UncondBranch = 0; SetFlags = 0;
+        CondBranch = 0; CBranchSel = 0; WriteRegSel = 0;
         MemToReg = 2'b0; ALUOp = 2'b0; ImmSel = 2'b0;
 
         // casez : case statement with don't cares = z or ?
@@ -38,23 +39,23 @@ module main_control (instruction, ALUSource, RegWrite, MemRead, MemWrite, Reg2Lo
 
             // B.LT
             11'b01010100zzz: begin
-                Branch = 1; ImmSel = 2'b11;
+                Branch = 1; ImmSel = 2'b11; CondBranch = 1;
                 ALUOp = 2'b01;
             end
 
             // BL
             11'b100101zzzzz: begin
-                UncondBranch = 1; ImmSel = 2'b10; MemToReg = 2'b10; // regwrite???
+                UncondBranch = 1; ImmSel = 2'b10; MemToReg = 2'b10; RegWrite = 1; WriteRegSel = 1;
             end
 
             // BR
             11'b11010110000: begin
-                UncondBranch = 1; // reg2loc??
+                UncondBranch = 1; CBranchSel = 1; Reg2Loc = 1;
             end
 
             // CBZ
             11'b10110100zzz: begin
-                Branch = 1; ImmSel = 2'b11; Reg2Loc = 1;
+                Branch = 1; ImmSel = 2'b11; Reg2Loc = 1; // CondBranch = 0
                 ALUOp = 2'b01;
             end
 

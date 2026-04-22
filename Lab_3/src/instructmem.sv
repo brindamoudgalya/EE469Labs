@@ -9,7 +9,7 @@
 //`define BENCHMARK "../benchmarks/test04_LdurStur.arm"
 //`define BENCHMARK "../benchmarks/test05_Blt.arm"
 
-`timescale 1ns/10ps
+`timescale 1ps/1ps
 
 // How many bytes are in our memory?  Must be a power of two.
 `define INSTRUCT_MEM_SIZE		1024
