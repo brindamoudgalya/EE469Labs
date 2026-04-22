@@ -179,6 +179,7 @@ module mux64x2to1 (out, in0, in1, sel);
     endgenerate
 endmodule
 
+// used in the sign extender
 module mux64x4to1 (out, in0, in1, in2, in3, sel);
     output logic [63:0] out;
     input logic [63:0] in0, in1, in2, in3;

@@ -1,4 +1,5 @@
-module alu_controller (ALUOp, opcode, cntrl);
+`timescale 1ps/1ps
+module alu_control (ALUOp, opcode, cntrl);
     output logic [2:0] cntrl;
     input logic [1:0] ALUOp;
     input logic [10:0] opcode;

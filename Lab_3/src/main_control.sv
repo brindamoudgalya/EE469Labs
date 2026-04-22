@@ -1,4 +1,5 @@
-module controller (instruction, ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, ALUOp, MemToReg, Branch, UncondBranch, SetFlags, ImmSel);
+`timescale 1ps/1ps
+module main_control (instruction, ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, ALUOp, MemToReg, Branch, UncondBranch, SetFlags, ImmSel);
     input logic [31:0] instruction;
     output logic ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, Branch, UncondBranch, SetFlags;
     output logic [1:0] ALUOp, MemToReg, ImmSel;
