@@ -5,13 +5,15 @@ module cpu (clk, reset);
     input logic clk, reset;
 
     // pc, instruction fetch
-    logic [63:0] pc, pc_next, pc_plus4, pc_plus_imm, br_target, shifted_imm;
+    logic [63:0] pc, pc_next, pc_plus4, pc_plus_imm, br_target, shifted_imm, imm64;
     logic [31:0] instr;
 
     pc_reg p(.pc_out(pc), .pc_in(pc_next), .clk(clk), .reset(reset));
 
     logic f1, f2, f3, f4;
     adder pc_add4 (.sum(pc_plus4), .zero(f1), .overflow(f2), .carry_out(f3), .negative(f4), .A(pc), .B(64'd4), .carry_in(1'b0));
+
+    assign shifted_imm = {imm64[61:0], 2'b00};
 
     logic d1, d2, d3, d4;
     adder pc_add_branch (.sum(pc_plus_imm), .zero(d1), .overflow(d2), .carry_out(d3), .negative(d4), .A(pc), .B(shifted_imm), .carry_in(1'b0));
@@ -38,7 +40,7 @@ module cpu (clk, reset);
 
     // regfile and sign extender
     logic [4:0] ReadRegister2, WriteRegister;
-    logic [63:0] ReadData1, ReadData2, WriteData, imm64;
+    logic [63:0] ReadData1, ReadData2, WriteData; // where imm64 declaration used to be
 
     // mux to choose rm or rd
     mux5x2to1 m1(ReadRegister2, instr[20:16], instr[4:0], Reg2Loc);
@@ -116,7 +118,7 @@ module cpu_testbench ();
         reset = 1; @(posedge clk);
         reset = 0; @(posedge clk);
 
-		for (i=0; i <= 20; i++) begin
+		for (i=0; i <= 100; i++) begin
 			@(posedge clk);
         end
         $stop;
