@@ -5812,3 +5812,5 @@ do runlab.do
 # ** Note: $stop    : ../src/cpu.sv(124)
 #    Time: 10250 ns  Iteration: 1  Instance: /cpu_testbench
 # Break in Module cpu_testbench at ../src/cpu.sv line 124
+# End time: 13:17:54 on Apr 26,2026, Elapsed time: 0:02:31
+# Errors: 0, Warnings: 3
