@@ -1,3 +1,5 @@
+
+`timescale 1ps/1ps
 module branch_logic (BranchToTake, UncondBranch, Branch, CondBranch, zero, negative, overflow);
     output logic BranchToTake;
     input logic UncondBranch, Branch, CondBranch;

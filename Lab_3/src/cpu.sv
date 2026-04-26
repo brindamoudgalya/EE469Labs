@@ -66,7 +66,7 @@ module cpu (clk, reset);
     alu a(.A(ReadData1), .B(ALU_B_in), .cntrl(ALUcntrl), .result(alu_out), 
         .negative(alu_neg), .zero(alu_zero), .overflow(alu_overflow), .carry_out(alu_carry));
 
-    flag_reg f1(.neg_out(flag_neg), .zero_out(flag_zero), .overflow_out(flag_overflow), 
+    flag_reg flagregister1(.neg_out(flag_neg), .zero_out(flag_zero), .overflow_out(flag_overflow), 
         .c_out(flag_carry), .neg_in(alu_neg), .zero_in(alu_zero), .overflow_in(alu_overflow), 
         .c_in(alu_carry), .clk(clk), .reset(reset), .SetFlags(SetFlags));
 
@@ -97,4 +97,28 @@ module cpu (clk, reset);
     // mux next pc (0 = PC+4, 1 = Branch Target)
     mux64x2to1 m_nextpc(.out(pc_next), .in0(pc_plus4), .in1(br_target), .sel(BrToTake));
 
+endmodule
+
+module cpu_testbench ();
+    logic clk, reset;
+
+    cpu dut (.clk, .reset);
+	
+	parameter clk_period = 100000;
+
+    initial begin
+        clk <= 0;
+        forever #(clk_period/2) clk <= ~clk;
+    end // initial clock
+
+	integer i;
+	initial begin
+        reset = 1; @(posedge clk);
+        reset = 0; @(posedge clk);
+
+		for (i=0; i <= 20; i++) begin
+			@(posedge clk);
+        end
+        $stop;
+    end
 endmodule

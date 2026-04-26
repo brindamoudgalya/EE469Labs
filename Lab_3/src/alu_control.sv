@@ -17,7 +17,7 @@ module alu_control (ALUOp, opcode, cntrl);
                     11'b10101011000:
                         cntrl = 3'b010;
                     11'b11101011000:
-                        cntrl = 3'b011
+                        cntrl = 3'b011;
                     default: 
                         cntrl = 3'b000;
                 endcase

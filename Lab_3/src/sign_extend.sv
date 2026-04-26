@@ -11,9 +11,9 @@ module sign_extend (imm64, instr, ImmSel);
     logic [63:0] se00, se01, se10, se11;
 
     assign se00 = {52'b0, instr[21:10]};
-    assign se01 = {55{instr[20]}, instr[20:12]};
-    assign se10 = {38{instr[25]}, instr[25:0]};
-    assign se11 = {45{instr[23]}, instr[23:5]};
+    assign se01 = {{55{instr[20]}}, instr[20:12]};
+    assign se10 = {{38{instr[25]}}, instr[25:0]};
+    assign se11 = {{45{instr[23]}}, instr[23:5]};
     
     mux64x4to1 m(imm64, se00, se01, se10, se11, ImmSel);
 endmodule

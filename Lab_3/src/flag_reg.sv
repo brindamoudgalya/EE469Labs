@@ -3,7 +3,7 @@
 `timescale 1ps/1ps
 module flag_reg (neg_out, zero_out, overflow_out, c_out, neg_in, zero_in, overflow_in, c_in, clk, reset, SetFlags);
     output logic neg_out, zero_out, overflow_out, c_out;
-    input logic c_out, neg_in, zero_in, overflow_in, c_in;
+    input logic neg_in, zero_in, overflow_in, c_in;
     input logic clk, reset, SetFlags;
 
     logic neg_temp, zero_temp, overflow_temp, c_temp;
