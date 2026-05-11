@@ -1,103 +1,75 @@
 // top level module, instantiates all others
-
+// deleted old version (lab3 version) to implement pipelined
 `timescale 1ps/1ps
 module cpu (clk, reset);
     input logic clk, reset;
+    
+    // STAGE 1: INSTRUCTION FETCH
 
-    // pc, instruction fetch
-    logic [63:0] pc, pc_next, pc_plus4, pc_plus_imm, br_target, shifted_imm, imm64;
-    logic [31:0] instr;
+    logic [63:0] if_pc, if_pc_next, if_pc_plus4;
+    logic [31:0] if_instr;
 
-    pc_reg p(.pc_out(pc), .pc_in(pc_next), .clk(clk), .reset(reset));
+    logic TakeBranch;
+    logic [63:0] ex_target_branch;
 
-    logic f1, f2, f3, f4;
-    adder pc_add4 (.sum(pc_plus4), .zero(f1), .overflow(f2), .carry_out(f3), .negative(f4), .A(pc), .B(64'd4), .carry_in(1'b0));
-
-    assign shifted_imm = {imm64[61:0], 2'b00};
+    pc_reg program_counter (.pc_plus4(if_pc), .pc_curr(if_pc_next), .clk(clk), .reset(reset));
 
     logic d1, d2, d3, d4;
-    adder pc_add_branch (.sum(pc_plus_imm), .zero(d1), .overflow(d2), .carry_out(d3), .negative(d4), .A(pc), .B(shifted_imm), .carry_in(1'b0));
+    adder pc_add_4 (.sum(if_pc_plus4), .zero(d1), .overflow(d2), .carry_out(d3), 
+                    .negative(d4), .A(if_pc), .B(64'd4), .carry_in(1'b0));
 
-    instructmem i(.address(pc), .instruction(instr), .clk(clk));
+    instructmem instrmem (.address(if_pc), .instruction(if_instr), .clk(clk));
 
-    // ------------------------------------------------------------------------------------------------
+    mux64x2to1 m_nextpc (.out(if_pc_next), .in0(if_pc_plus4), 
+                        .in1(ex_target_branch), .sel(TakeBranch));
 
-    // main_control and alu_control
-    logic ALUSource, RegWrite, MemRead, MemWrite, Reg2Loc, Branch, UncondBranch, SetFlags;
-    logic CondBranch, CBranchSel, WriteRegSel;
-    logic [1:0] ALUOp, MemToReg, ImmSel;
-    logic [2:0] ALUcntrl;
+    // pipeline reg: IF/ID
+    logic [63:0] id_pc, id_pc_plus4;
+    logic [31:0] id_instr;
 
-    main_control mc(.instruction(instr), .ALUSource(ALUSource), 
-        .RegWrite(RegWrite), .MemRead(MemRead), .MemWrite(MemWrite), 
-        .Reg2Loc(Reg2Loc), .ALUOp(ALUOp), .MemToReg(MemToReg), .Branch(Branch), 
-        .UncondBranch(UncondBranch), .SetFlags(SetFlags), .ImmSel(ImmSel), 
-        .CBranchSel(CBranchSel), .WriteRegSel(WriteRegSel), .CondBranch(CondBranch));
+    // if branchtaken, FLUSH the instruction
+    pipeline_reg_64bit p_if_id_pc (.q(id_pc), .d(if_pc), .clk(clk), .reset(reset), 
+                                    .flush_en(TakeBranch));
+    pipeline_reg_64bit p_if_id_pc4 (.q(id_pc_plus4), .d(if_pc_plus4), .clk(clk), 
+                                    .reset(reset), .flush_en(TakeBranch));
+    pipeline_reg_32bit p_if_id_instr (.q(id_instr), .d(if_instr), .clk(clk), .reset(reset), 
+                                        .flush_en(TakeBranch));
 
-    alu_control ac(.ALUOp(ALUOp), .opcode(instr[31:21]), .cntrl(ALUcntrl));
+    // STAGE 2: INSTRUCTION DECODE
+    logic id_ALUSource, id_RegWrite, id_MemRead, id_MemWrite, id_Reg2Loc;
+    logic id_Branch, id_UncondBranch, id_SetFlags, id_CBranchSel, id_WriteRegSel, id_CondBranch;
+    logic [1:0] id_ALUOp, id_MemToReg, id_ImmSel;
+    logic [2:0] id_ALU_control_3bit;
 
-    // ------------------------------------------------------------------------------------------------
+    main_control mc(
+        .instruction(id_instr), .ALUSource(id_ALUSource), .RegWrite(id_RegWrite),
+        .MemRead(id_MemRead), .MemWrite(id_MemWrite), .Reg2Loc(id_Reg2Loc),
+        .Branch(id_Branch), .UncondBranch(id_UncondBranch), .SetFlags(id_SetFlags),
+        .ALUOp(id_ALUOp), .MemToReg(id_MemToReg), .ImmSel(id_ImmSel),
+        .CBranchSel(id_CBranchSel), .WriteRegSel(id_WriteRegSel), .CondBranch(id_CondBranch)
+    );
 
-    // regfile and sign extender
-    logic [4:0] ReadRegister2, WriteRegister;
-    logic [63:0] ReadData1, ReadData2, WriteData; // where imm64 declaration used to be
+    alu_control ac (.ALUOp(id_ALUOp), .opcode(id_instr[31:21]), .cntrl(id_ALU_control_3bit));
 
-    // mux to choose rm or rd
-    mux5x2to1 m1(ReadRegister2, instr[20:16], instr[4:0], Reg2Loc);
+    logic [4:0] id_ReadReg2, id_WriteReg;
+    logic [63:0] id_ReadData1, id_ReadData2, id_imm64;
 
-    // mux to choose rd or x30 for BL
-    mux5x2to1 m2(WriteRegister, instr[4:0], 5'd30, WriteRegSel);
+    mux5x2to1 m_reg2loc (.out(id_ReadReg2), .in0(id_instr[20:16]), .in1(id_instr[4:0]), .sel(id_Reg2Loc));
+    mux5x2to1 m_writereg (.out(id_WriteReg), .in0(id_instr[4:0]), .in1(5'd30), .sel(id_WriteRegSel));
 
-    regfile r(.ReadData1(ReadData1), .ReadData2(ReadData2), 
-        .ReadRegister1(instr[9:5]), .ReadRegister2(ReadRegister2), 
-        .WriteRegister(WriteRegister), .WriteData(WriteData), 
-        .RegWrite(RegWrite), .clk(clk), .reset(reset));
-    
-    sign_extend se(.imm64(imm64), .instr(instr), .ImmSel(ImmSel));
+    logic wb_RegWrite;
+    logic [4:0] wb_WriteReg;
+    logic [63:0] wb_WriteData;
 
-    // ------------------------------------------------------------------------------------------------
+    regfile rf (
+        .ReadData1(id_ReadData1), .ReadData2(id_ReadData2), .ReadRegister1(id_instr[9:5]), 
+        .ReadRegister2 (id_ReadReg2), .WriteRegister(wb_WriteReg), .WriteData(wb_WriteData), 
+        .RegWrite(wb_RegWrite), .clk(clk), .reset(reset)
+    );
 
-    // alu, flags
-    logic [63:0] ALU_B_in, alu_out;
-    logic alu_neg, alu_zero, alu_overflow, alu_carry;
-    logic flag_neg, flag_zero, flag_overflow, flag_carry;
+    sign_extend se (.imm64(imm64), .instr(id_instr), .ImmSel(id_ImmSel));
 
-    // mux to choose ReadData2 or imm for ALU
-    mux64x2to1 m_alu(ALU_B_in, ReadData2, imm64, ALUSource);
-
-    alu a(.A(ReadData1), .B(ALU_B_in), .cntrl(ALUcntrl), .result(alu_out), 
-        .negative(alu_neg), .zero(alu_zero), .overflow(alu_overflow), .carry_out(alu_carry));
-
-    flag_reg flagregister1(.neg_out(flag_neg), .zero_out(flag_zero), .overflow_out(flag_overflow), 
-        .c_out(flag_carry), .neg_in(alu_neg), .zero_in(alu_zero), .overflow_in(alu_overflow), 
-        .c_in(alu_carry), .clk(clk), .reset(reset), .SetFlags(SetFlags));
-
-    // ------------------------------------------------------------------------------------------------
-
-    // data mem
-    logic [63:0] read_data;
-
-    datamem dm(.address(alu_out), .write_enable(MemWrite), .read_enable(MemRead),
-        .write_data(ReadData2), .clk(clk), .xfer_size(4'b1000), .read_data(read_data));
-    
-    // mux write data (00 = ALU, 01 = Memory, 10 = PC+4 (BL))
-    mux64x4to1 memtoreg(.out(WriteData), .in0(alu_out), .in1(read_data), 
-        .in2(pc_plus4), .in3(64'b0), .sel(MemToReg));
-
-    // ------------------------------------------------------------------------------------------------
-
-    // branching logic
-    logic BrToTake;
-
-    branch_logic bl(.BranchToTake(BrToTake), .UncondBranch(UncondBranch), 
-        .Branch(Branch), .CondBranch(CondBranch), .zero(alu_zero), 
-        .negative(flag_neg), .overflow(flag_overflow));
-
-    // mux branch target (0 = PC+imm, 1 = Reg[Rd] (BR))
-    mux64x2to1 m_branching(.out(br_target), .in0(pc_plus_imm), .in1(ReadData2), .sel(CBranchSel));
-
-    // mux next pc (0 = PC+4, 1 = Branch Target)
-    mux64x2to1 m_nextpc(.out(pc_next), .in0(pc_plus4), .in1(br_target), .sel(BrToTake));
+    // pipeline reg: ID/EX
 
 endmodule
 
