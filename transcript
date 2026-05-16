@@ -1,0 +1,7 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.zip
+# ** Error: invalid command name "PK"
+# Error in macro ./runlab.zip line 1
+# invalid command name "PK"
+#     while executing
+# "PK"

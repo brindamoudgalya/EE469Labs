@@ -14,7 +14,7 @@ module cpu (clk, reset);
     logic TakeBranch;
     logic [63:0] ex_target_branch;
 
-    pc_reg program_counter (.pc_plus4(if_pc), .pc_curr(if_pc_next), .clk(clk), .reset(reset));
+    pc_reg program_counter (.pc_out(if_pc), .pc_in(if_pc_next), .clk(clk), .reset(reset));
 
     logic d1, d2, d3, d4;
     adder pc_add_4 (.sum(if_pc_plus4), .zero(d1), .overflow(d2), .carry_out(d3), 
@@ -67,10 +67,15 @@ module cpu (clk, reset);
     logic [4:0] wb_WriteReg;
     logic [63:0] wb_WriteData;
 
+    // NEED TO READ ON LAST HALF OF CLOCK CYCLE, AND WRITE ON FIRST HALF
+    // SO: write on posedge, read on NEGEDGE
+    logic n_clk;
+    not #(50) not_clk (n_clk, clk);
+
     regfile rf (
         .ReadData1(id_ReadData1), .ReadData2(id_ReadData2), .ReadRegister1(id_instr[9:5]), 
         .ReadRegister2 (id_ReadReg2), .WriteRegister(wb_WriteReg), .WriteData(wb_WriteData), 
-        .RegWrite(wb_RegWrite), .clk(clk), .reset(reset)
+        .RegWrite(wb_RegWrite), .clk(n_clk), .reset(reset)
     );
 
     sign_extend se (.imm64(id_imm64), .instr(id_instr), .ImmSel(id_ImmSel));
@@ -84,6 +89,7 @@ module cpu (clk, reset);
     logic [63:0] ex_ReadData1, ex_ReadData2, ex_imm64, ex_pc, ex_pc_plus4;
     logic [4:0] ex_Rn, ex_Rm, ex_WriteReg;
 
+    // pipeline reg ALL IMPORTANT CONTROL SIGNALS from id to ex
     pipeline_reg_1bit  p_id_ex_c1  (.q(ex_ALUSource), .d(id_ALUSource), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_1bit  p_id_ex_c2  (.q(ex_RegWrite), .d(id_RegWrite), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_1bit  p_id_ex_c3  (.q(ex_MemRead), .d(id_MemRead), .clk(clk), .reset(reset), .flush_en(1'b0));
@@ -93,9 +99,14 @@ module cpu (clk, reset);
     pipeline_reg_1bit  p_id_ex_c7  (.q(ex_SetFlags), .d(id_SetFlags), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_1bit  p_id_ex_c8  (.q(ex_CBranchSel), .d(id_CBranchSel), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_1bit  p_id_ex_c9  (.q(ex_CondBranch), .d(id_CondBranch), .clk(clk), .reset(reset), .flush_en(1'b0));
+    
+    // whether data comes from data_mem (LDUR) or ALU (literally everything else)
     pipeline_reg_2bit  p_id_ex_c10 (.q(ex_MemToReg), .d(id_MemToReg), .clk(clk), .reset(reset), .flush_en(1'b0));
+    
+    // alu control : which instruction (ADD, SUB, AND, OR, XOR)
     pipeline_reg_3bit  p_id_ex_c11 (.q(ex_ALU_cntrl_3bit), .d(id_ALU_cntrl_3bit), .clk(clk), .reset(reset), .flush_en(1'b0));
 
+    // pipeline important signals like Rn, Rm, and immediate value
     pipeline_reg_64bit p_id_ex_d1  (.q(ex_ReadData1), .d(id_ReadData1), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_64bit p_id_ex_d2  (.q(ex_ReadData2), .d(id_ReadData2), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_64bit p_id_ex_d3  (.q(ex_imm64), .d(id_imm64), .clk(clk), .reset(reset), .flush_en(1'b0));
@@ -109,21 +120,21 @@ module cpu (clk, reset);
     // -----------------------------------------------------------------------------------------------------------
 
     // STAGE 3: EXECUTE
-    logic [1:0] ForwardA, ForwardB;
-    logic [63:0] Forwarded_A, Forwarded_B, ALU_B_in, ex_alu_result, ex_shifted_imm, ex_target_branch_offset;
+    logic [1:0] forwardA, forwardB;
+    logic [63:0] forwardedA, forwardedB, ALU_B_in, ex_alu_result, ex_shifted_imm, ex_target_branch_offset;
     logic alu_negative, alu_zero, alu_overflow, alu_carry;
     logic flag_n, flag_z, flag_v, flag_c;
 
     // fwding muxes: 00 = Normal, 01 = From MEM/WB, 10 = From EX/MEM
     // mem_ALU_result evaluated in mem stage below... wb_WriteData loops back from wb.
     logic [63:0] mem_ALU_result; 
-    mux64x4to1 m_fwd_a (.out(Forwarded_A), .in0(ex_ReadData1), .in1(wb_WriteData), .in2(mem_ALU_result), .in3(64'b0), .sel(ForwardA));
-    mux64x4to1 m_fwd_b (.out(Forwarded_B), .in0(ex_ReadData2), .in1(wb_WriteData), .in2(mem_ALU_result), .in3(64'b0), .sel(ForwardB));
+    mux64x4to1 m_fwd_a (.out(forwardedA), .in0(ex_ReadData1), .in1(wb_WriteData), .in2(mem_ALU_result), .in3(64'b0), .sel(forwardA));
+    mux64x4to1 m_fwd_b (.out(forwardedB), .in0(ex_ReadData2), .in1(wb_WriteData), .in2(mem_ALU_result), .in3(64'b0), .sel(forwardB));
 
-    mux64x2to1 m_alusrc (.out(ALU_B_in), .in0(Forwarded_B), .in1(ex_imm64), .sel(ex_ALUSource));
+    mux64x2to1 m_alusrc (.out(ALU_B_in), .in0(forwardedB), .in1(ex_imm64), .sel(ex_ALUSource));
 
     alu main_alu (
-        .A(Forwarded_A), .B(ALU_B_in), .cntrl(ex_ALU_cntrl_3bit),
+        .A(forwardedA), .B(ALU_B_in), .cntrl(ex_ALU_cntrl_3bit),
         .result(ex_alu_result), .negative(alu_negative), .zero(alu_zero),
         .overflow(alu_overflow), .carry_out(alu_carry)
     );
@@ -138,7 +149,7 @@ module cpu (clk, reset);
     logic d5, d6, d7, d8; 
     adder branch_adder (.sum(ex_target_branch_offset), .zero(d5), .overflow(d6), .carry_out(d7), .negative(d8), .A(ex_pc), .B(ex_shifted_imm), .carry_in(1'b0));
 
-    mux64x2to1 m_br_target (.out(ex_target_branch), .in0(ex_target_branch_offset), .in1(Forwarded_B), .sel(ex_CBranchSel));
+    mux64x2to1 m_br_target (.out(ex_target_branch), .in0(ex_target_branch_offset), .in1(forwardedB), .sel(ex_CBranchSel));
 
     branch_logic bl(
         .BranchToTake(TakeBranch), .UncondBranch(ex_UncondBranch), .Branch(ex_Branch), 
@@ -150,16 +161,17 @@ module cpu (clk, reset);
     // pipeline reg: EX/MEM
     logic mem_RegWrite, mem_MemRead, mem_MemWrite;
     logic [1:0] mem_MemToReg;
-    logic [63:0] mem_Forwarded_B, mem_pc_plus4;
+    logic [63:0] mem_forwardedB, mem_pc_plus4;
     logic [4:0] mem_WriteReg;
 
+    // more important control signals
     pipeline_reg_1bit  p_ex_mem_c1 (.q(mem_RegWrite), .d(ex_RegWrite), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_1bit  p_ex_mem_c2 (.q(mem_MemRead), .d(ex_MemRead), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_1bit  p_ex_mem_c3 (.q(mem_MemWrite), .d(ex_MemWrite), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_2bit  p_ex_mem_c4 (.q(mem_MemToReg), .d(ex_MemToReg), .clk(clk), .reset(reset), .flush_en(1'b0));
 
     pipeline_reg_64bit p_ex_mem_d1 (.q(mem_ALU_result), .d(ex_alu_result), .clk(clk), .reset(reset), .flush_en(1'b0));
-    pipeline_reg_64bit p_ex_mem_d2 (.q(mem_Forwarded_B), .d(Forwarded_B), .clk(clk), .reset(reset), .flush_en(1'b0));
+    pipeline_reg_64bit p_ex_mem_d2 (.q(mem_forwardedB), .d(forwardedB), .clk(clk), .reset(reset), .flush_en(1'b0));
     pipeline_reg_64bit p_ex_mem_d3 (.q(mem_pc_plus4), .d(ex_pc_plus4), .clk(clk), .reset(reset), .flush_en(1'b0));
 
     pipeline_reg_5bit  p_ex_mem_r1 (.q(mem_WriteReg), .d(ex_WriteReg), .clk(clk), .reset(reset), .flush_en(1'b0));
@@ -171,7 +183,7 @@ module cpu (clk, reset);
 
     datamem dm(
         .address(mem_ALU_result), .write_enable(mem_MemWrite), .read_enable(mem_MemRead),
-        .write_data(mem_Forwarded_B), .clk(clk), .xfer_size(4'b1000), .read_data(mem_read_data)
+        .write_data(mem_forwardedB), .clk(clk), .xfer_size(4'b1000), .read_data(mem_read_data)
     );
 
     // -----------------------------------------------------------------------------------------------------------
@@ -209,12 +221,12 @@ module cpu (clk, reset);
         .mem_wb_WriteReg(wb_WriteReg),
         .ex_mem_RegWrite(mem_RegWrite), 
         .mem_wb_RegWrite(wb_RegWrite),
-        .ForwardA(ForwardA), 
-        .ForwardB(ForwardB)
+        .forwardA(forwardA), 
+        .forwardB(forwardB)
     );
 endmodule
 
-module cpu_testbench ();
+module cpu_pipelined_testbench ();
     logic clk, reset;
 
     cpu dut (.clk, .reset);
