@@ -243,7 +243,7 @@ module cpu_pipelined_testbench ();
         reset <= 1; @(posedge clk);
         reset <= 0; @(posedge clk);
 
-		for (i=0; i <= 500; i++) begin
+		for (i=0; i <= 1000; i++) begin
 			@(posedge clk);
         end
         $stop;
