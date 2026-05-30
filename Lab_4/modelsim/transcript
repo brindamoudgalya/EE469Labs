@@ -557,3 +557,5 @@ do runlab.do
 # ** Note: $stop    : ../src/cpu_pipelined.sv(249)
 #    Time: 100250 ns  Iteration: 1  Instance: /cpu_pipelined_testbench
 # Break in Module cpu_pipelined_testbench at ../src/cpu_pipelined.sv line 249
+# End time: 11:42:28 on May 28,2026, Elapsed time: 216:10:32
+# Errors: 0, Warnings: 3
